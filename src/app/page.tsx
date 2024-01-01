@@ -1,24 +1,16 @@
-import Image from "next/image";
-import bgImg from "~/images/its-bg-7.png";
+
 
 export default function Home() {
   return (
     <>
       <main>
-        <section>
-          <p>HCDC - ITS</p>
-          <div className="absolute left-0 right-0 top-0 -z-20">
-            <Image 
-              src={bgImg}
-              priority
-              alt="bg img"
-              placeholder="blur"
-              draggable="false"
-              className="pointer-events-none -mb-96 mt-44 h-full w-full sm:mt-20 md:mt-0"
-            />
+      <div className="container mx-auto flex flex-col px-6 xl:px-0">
+         <div className="block flex-col-reverse lg:flex-row justify-between items-center py-12">
+          <p>Holy Cross of Davao College</p>
+          <h1>Information Technology Society</h1>
           </div>
-        </section>
+          </div>
       </main>
     </>
   );
-}
+} 
