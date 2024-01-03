@@ -9,11 +9,17 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      fontFamily: {},
+      fontFamily: {
+        montserrat: ['Montserrat', 'sans-serif'],
+        'montserrat-thin': ['Montserrat', 'sans-serif', '100'],
+        'montserrat-regular': ['Montserrat', 'sans-serif', '400'],
+        'montserrat-bold': ['Montserrat', 'sans-serif', '700'],
+        'montserrat-semibold': ['Montserrat', 'sans-serif', '600'],
+      },
       colors: {
         primary: {
           100: '#FFFCE1',
-          200: '#E0E0E0',
+          200: '#960202',
         },
         secondary: {
           100: '#222222',
