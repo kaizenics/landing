@@ -26,6 +26,12 @@ const config: Config = {
           200: '#171717',
         },
       },
+      fontSize: {},
+      spacing: {},
+      width: {
+        '13/13': '72%',
+        '12/13': '96.3076923%',
+      },
     },
   },
   darkMode: 'class', 
