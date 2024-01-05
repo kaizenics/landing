@@ -12,15 +12,14 @@ export const Navbar = () => {
   };
 
   return (
-    <Container className="flex flex-col lg:flex-row justify-between container items-center py-16">
+    <Container className="flex flex-col lg:flex-row justify-between container items-center py-10">
       <h4 className="font-montserrat text-2xl mb-0 lg:mb-0">HCDC-ITS</h4>
 
       <div className="flex flex-col lg:flex-row items-center space-y-4 lg:space-y-0 lg:space-x-12">
         <ul className={`font-montserrat lg:flex space-x-12 ${isOpen ? "hidden" : "block"}`}>
           <li>about</li>
-          <li>projects</li>
-          <li>publications</li>
-          <li>list of officers</li>
+          <li>updates</li>
+          <li>contributors</li>
         </ul>
 
         <Button className="font-monserrat text-sm md:text-base transition-opacity duration-300 ease-in-out hover:opacity-70">

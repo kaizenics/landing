@@ -14,7 +14,7 @@ export const About = () => {
   }, []);
 
   return (
-    <section className="mt-[35%] mb-80">
+    <section className="mt-[35%] mb-80"  data-aos="fade-up">
       <div className="grid lg:grid-cols-2 gap-0 py-14 mx-auto border-t-2 border-[#3a3a3a]"
       data-aos="fade-up"
       >
