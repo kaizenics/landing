@@ -11,16 +11,18 @@
   "dependencies": {
     "aos": "^3.0.0-beta.6",
     "next": "^14.0.4",
-    "react": "^18",
-    "react-dom": "^18",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "react-icons": "^4.12.0",
     "react-interactions": "^0.0.8",
+    "react-slick": "^0.29.0",
     "swr": "^2.2.4"
   },
   "devDependencies": {
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "@types/react-slick": "^0.23.13",
     "autoprefixer": "^10.0.1",
     "eslint": "^8",
     "eslint-config-next": "14.0.4",

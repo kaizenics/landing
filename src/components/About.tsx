@@ -14,12 +14,10 @@ export const About = () => {
   }, []);
 
   return (
-    <section className="mt-96 mb-96">
+    <section className="mt-[35%] mb-80">
       <div className="grid lg:grid-cols-2 gap-0 py-14 mx-auto border-t-2 border-[#3a3a3a]"
       data-aos="fade-up"
       >
-        {/* About Us */}
-  
           <div className="lg:w-3/4 lg:ml-40">
             <h3 className="font-montserrat font-regular text-3xl lg:text-5xl mb-8">
               About us
@@ -39,11 +37,8 @@ export const About = () => {
               </button>
               <IoArrowForward className="w-8 h-8 ml-2 mt-14" />
             </div>
-
         </div>
 
-        {/* Our Mission */}
- 
           <div className="lg:w-3/4 lg:mr-32">
             <h3 className="font-montserrat font-regular text-3xl lg:text-5xl mb-8">
               Our Mission
