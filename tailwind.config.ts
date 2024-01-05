@@ -29,7 +29,7 @@ const config: Config = {
       fontSize: {},
       spacing: {},
       width: {
-        '13/13': '72%',
+        '13/13': '75%',
         '12/13': '96.3076923%',
       },
     },
