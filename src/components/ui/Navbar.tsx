@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { Button } from "~/components/ui/Button";
 import { Container } from "~/components/ui/Container";
-import { Link } from 'react-scroll/modules';
+import { Link } from "react-scroll/modules";
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -13,25 +13,9 @@ export const Navbar = () => {
   };
 
   return (
-    <Container className="flex flex-col lg:flex-row justify-between container items-center py-16">
-      <h4 className="font-montserrat text-2xl mb-0 lg:mb-0">HCDC-ITS</h4>
-
-      <div className="flex flex-col lg:flex-row items-center space-y-4 lg:space-y-0 lg:space-x-12">
-        <ul className={`font-montserrat lg:flex space-x-12 ${isOpen ? "hidden" : "block"}`}>
-          <li>
-            <Link to="about" smooth={true} duration={500} spy={true} offset={-70} className="cursor-pointer">about</Link>
-          </li>
-          <li>
-            <Link to="publications" smooth={true} duration={500} spy={true} offset={-70} className="cursor-pointer">featured</Link>
-          </li>
-          <li>
-            <Link to="contributors" smooth={true} duration={500} spy={true} offset={-70} className="cursor-pointer">contributors</Link>
-          </li>
-        </ul>
-
-        <Button className="font-monserrat text-sm md:text-base transition-opacity duration-300 ease-in-out hover:opacity-70">
-          Browse Merch
-        </Button>
+    <Container className="md:flex flex-col lg:flex-row justify-between container md:items-center py-20">
+      <div className="flex justify-between items-center">
+        <h4 className="font-montserrat text-2xl mb-0 lg:mb-0">HCDC-ITS</h4>
 
         <div className="lg:hidden">
           <button
@@ -56,20 +40,113 @@ export const Navbar = () => {
         </div>
       </div>
 
+      <div className="flex md:flex-col lg:flex-row md:items-center space-y-4 lg:space-y-0 lg:space-x-12 md:z-[-1] ">
+        {/* Conditionally render links based on screen size */}
+        <ul
+          className={`font-montserrat lg:flex space-x-12 ${
+            isOpen ? "hidden" : "hidden md:block"
+          }`}
+        >
+          <li>
+            <Link
+              to="about"
+              smooth={true}
+              duration={500}
+              spy={true}
+              offset={-70}
+              className="cursor-pointer"
+            >
+              about
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="publications"
+              smooth={true}
+              duration={500}
+              spy={true}
+              offset={-70}
+              className="cursor-pointer"
+            >
+              featured
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="contributors"
+              smooth={true}
+              duration={500}
+              spy={true}
+              offset={-70}
+              className="cursor-pointer"
+            >
+              contributors
+            </Link>
+          </li>
+        </ul>
+
+        <Button
+          className={`font-monserrat text-sm md:text-base transition-opacity duration-300 ease-in-out hover:opacity-70 hidden md:block`}
+        >
+          Browse Merch
+        </Button>
+      </div>
+
       {/* BEGIN: Mobile Menu */}
-      <div className={`lg:hidden ${isOpen ? "block" : "hidden"}`}>
+      <div
+        className={`lg:hidden ${
+          isOpen ? "block" : "hidden"
+        } flex flex-col items-end py-5 px-2 text-right space-y-4`}
+      >
         <ul className="font-montserrat flex flex-col space-y-4">
           <li>
-            <Link to="about" smooth={true} duration={500} spy={true} offset={-70}>About</Link>
+            <Link
+              to="about"
+              smooth={true}
+              duration={500}
+              spy={true}
+              offset={-70}
+            >
+              about
+            </Link>
           </li>
           <li>
-            <Link to="publications" smooth={true} duration={500} spy={true} offset={-70}>Publications</Link>
+            <Link
+              to="publications"
+              smooth={true}
+              duration={500}
+              spy={true}
+              offset={-70}
+            >
+              publications
+            </Link>
           </li>
           <li>
-            <Link to="contributors" smooth={true} duration={500} spy={true} offset={-70}>Contributors</Link>
+            <Link
+              to="contributors"
+              smooth={true}
+              duration={500}
+              spy={true}
+              offset={-70}
+            >
+              contributors
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="merch"
+              smooth={true}
+              duration={500}
+              spy={true}
+              offset={-70}
+              className="cursor-pointer"
+            >
+              browse merch
+            </Link>
           </li>
         </ul>
       </div>
+
       {/* END: Mobile Menu */}
     </Container>
   );

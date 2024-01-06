@@ -2,7 +2,6 @@ import { About } from "~/components/About";
 import { Publications } from "~/components/Publications";
 import { Container } from "~/components/ui/Container";
 import { MdExpandMore } from "react-icons/md";
-import { Link } from "react-scroll/modules";
 
 export default function Home() {
   return (
