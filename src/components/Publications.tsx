@@ -19,16 +19,18 @@ const updates = [
   {
     title: "Front End Developer Roadmap",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel libero at lectus rutrum vestibulum vitae ut turpis. Ut ultricies pulvinar posuere.",
+      "Are you passionate about Web Development, with a keen interest in both Designing and Programming? This comprehensive guide is tailored for individuals like you, providing a clear path to becoming a proficient Front-end Web Developer",
     date: "September 18, 2021",
     image: frontEndPoster,
+    link: "http://tinyurl.com/yuhn8evr"
   },
   {
     title: "HCDC ITS New Officers 2023",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel libero at lectus rutrum vestibulum vitae ut turpis. Ut ultricies pulvinar posuere.",
+      "We are excited to have such talented individuals on board, and we are confident that they will continue to uphold the club's mission of promoting innovation and excellence in the field of information technology. Best of luck to our new leaders as they take on this important role!",
     date: "September 18, 2021",
     image: officers,
+    link: "http://tinyurl.com/44btcmau"
   },
   {
     title: "ITS Membership",
@@ -36,6 +38,7 @@ const updates = [
       "Lorem ipsum dolor sit amet, consectetur adnpmipiscing elit. Donec vel libero at lectus rutrum vestibulum vitae ut turpis. Ut ultricies pulvinar posuere.",
     date: "September 18, 2021",
     image: itsMem,
+    link: "https://www.facebook.com/HCDCITS/photos/a.10150174591300054/10160194599660054/"
   },
   {
     title: "PSITS XI: Festival of Talents 2024",
@@ -43,6 +46,7 @@ const updates = [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel libero at lectus rutrum vestibulum vitae ut turpis. Ut ultricies pulvinar posuere.",
     date: "September 18, 2021",
     image: psitsPub,
+    link: "https://www.facebook.com/HCDCITS/photos/a.10150174591300054/10160194599660054/"
   },
   {
     title: "CET Shirt Payment",
@@ -50,6 +54,7 @@ const updates = [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel libero at lectus rutrum vestibulum vitae ut turpis. Ut ultricies pulvinar posuere.",
     date: "September 18, 2021",
     image: cetShirt,
+    link: "https://www.facebook.com/HCDCITS/photos/a.10150174591300054/10160194599660054/"
   },
   {
     title: "Bakit nag IT ang Beshy Ko?",
@@ -57,10 +62,15 @@ const updates = [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel libero at lectus rutrum vestibulum vitae ut turpis. Ut ultricies pulvinar posuere.",
     date: "September 18, 2021",
     image: beshyKo,
+    link: "https://www.facebook.com/HCDCITS/photos/a.10150174591300054/10160194599660054/q"
   },
 ];
 
-export const Publications = () => {
+interface PublicationsProps {
+  id: string;
+}
+
+export const Publications: React.FC<PublicationsProps> = ({ id }) => {
   const [currentPage, setCurrentPage] = useState(1);
 
   const indexOfLastUpdate = currentPage * updatesPerPage;
@@ -81,7 +91,7 @@ export const Publications = () => {
   }, []);
 
   return (
-    <section>
+    <section id={id}>
       <Container className="container flex flex-col px-6 xl:px-0">
         <div
           className="flex flex-col-reverse lg:flex-row justify-between items-center py-6"
@@ -99,22 +109,22 @@ export const Publications = () => {
             {currentUpdates.map((update, index) => (
               <div
                 key={index}
-                className="w-[100%] h-[300px] box-border border-2 border-[#3a3a3a] flex flex-col lg:flex-row justify-between items-center transition-transform duration-300 ease-in-out hover:scale-105"
+                className="w-[100%] h-[300px] box-border border-2 border-[#3a3a3a] flex flex-row justify-between items-center transition-transform duration-300 ease-in-out hover:scale-105"
                 
               >
-                <div className="relative w-[500px] h-full">
+                <div className="relative min-w-[300px] h-full">
                   <Image
                     src={update.image}
                     alt={update.title}
                     layout="fill"
                     objectFit="cover"
-                    className="w-11/12 h-[400px]"
                   />
                 </div>
-                <div className="mx-5 px-5">
+                <div className="mx-7 py-5">
                   <h2 className="font-montserrat text-2xl font-bold mb-3">{update.title}</h2>
                   <p className="font-montserrat text-gray-500">{update.description}</p>
                   <p className="font-montserrat text-gray-400 my-4">{update.date}</p>
+                  <a href={update.link} target="_blank" className="font-montserrat font-semibold text-gray-400 my-7 underline cursor-pointer">See More</a>
                 </div>
               </div>
             ))}

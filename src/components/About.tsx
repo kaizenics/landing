@@ -4,8 +4,11 @@ import { useEffect } from 'react'
 import { IoArrowForward } from "react-icons/io5";
 import AOS from "aos";
 import 'aos/dist/aos.css';
+interface AboutProps {
+  id: string;
+}
 
-export const About = () => {
+export const About: React.FC<AboutProps> = ({ id }) => {
   useEffect (() => {
     AOS.init({
       duration: 1000,
@@ -14,7 +17,7 @@ export const About = () => {
   }, []);
 
   return (
-    <section className="mt-[35%] mb-80"  data-aos="fade-up">
+    <section id={id} className="mt-[35%] mb-96"  data-aos="fade-up">
       <div className="grid lg:grid-cols-2 gap-0 py-14 mx-auto border-t-2 border-[#3a3a3a]"
       data-aos="fade-up"
       >
