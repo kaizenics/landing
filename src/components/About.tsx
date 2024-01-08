@@ -22,10 +22,10 @@ export const About: React.FC<AboutProps> = ({ id }) => {
       data-aos="fade-up"
       >
           <div className="m-10 sm:m-10 md:m-10 lg:w-3/4 lg:ml-28 xl:w-3/4 xl:ml-40">
-            <h3 className="font-montserrat font-regular text-3xl sm:text-3xl md:text-3xl lg:text-4xl xl:text-5xl mb-8">
+            <h3 className="font-montserrat font-regular text-2xl sm:text-3xl md:text-3xl lg:text-4xl xl:text-5xl mb-8">
               About us
             </h3>
-            <p className="font-montserrat font-regular lg:text-2xl xl:text-3xl text-left">
+            <p className="font-montserrat font-regular text-md sm:text-2xl md:text-2xl lg:text-2xl xl:text-3xl  text-left">
               The{" "}
               <span className="font-semibold">
                 HCDC Information Technology Society
@@ -43,10 +43,10 @@ export const About: React.FC<AboutProps> = ({ id }) => {
         </div>
 
           <div className="m-10 sm:m-10 md:m-10 lg:w-3/4 xl:w-3/4">
-            <h3 className="font-montserrat font-regular text-3xl lg:text-4xl xl:text-5xl mb-8">
+            <h3 className="font-montserrat font-regular text-2xl lg:text-4xl xl:text-5xl mb-8">
               Our Mission
             </h3>
-            <p className="font-montserrat font-regular lg:text-2xl xl:text-3xl text-left">
+            <p className="font-montserrat font-regular text-md sm:text-2xl md:text-2xl lg:text-2xl xl:text-3xl text-left">
               To provide opportunities for students to enhance their IT skills,
               knowledge, and professional development through various
               activities and initiatives.
