@@ -1,3 +1,5 @@
+
+
 import { About } from "~/components/About";
 import { Publications } from "~/components/Publications";
 import { Container } from "~/components/ui/Container";
@@ -16,14 +18,14 @@ export default function Home() {
                 </span>
                 / Unofficial Publication Website
               </p>
-             
-                  <div className="bg-primary-200 w-[90%] lg:max-w-[100%] p-1 rounded-full">
+
+              <div className="bg-primary-200 w-[90%] lg:max-w-[100%] p-1 rounded-full">
                 <h1 className="font-montserrat font-bold text-[20px] lg:text-7xl uppercase mx-4 md:text-5xl">
                   Information Technology
                 </h1>
               </div>
-               
-            
+
+
               <h1 className="font-montserrat font-semibold text-5xl lg:text-9xl uppercase md:text-7xl">
                 Society
               </h1>
@@ -35,8 +37,8 @@ export default function Home() {
               </p>
               <MdExpandMore className="w-10 h-10 animate-bounce" />
             </div>
-            </Container>
-            </section>
+          </Container>
+        </section>
 
         <About id="about" />
         <Publications id="publications" />

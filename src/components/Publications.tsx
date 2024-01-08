@@ -12,6 +12,7 @@ import frontEndPoster from "~/assets/images/front-end-poster.png";
 import psitsPub from "~/assets/images/psits-pub.png";
 import officers from "~/assets/images/officers.jpg";
 import beshyKo from "~/assets/images/beshy-ko.png";
+import hcdcbsitalumni from "~/assets/images/hcdc-bsit-alumni-association.png";
 
 const updatesPerPage = 3;
 
@@ -23,6 +24,14 @@ const updates = [
     date: "September 18, 2021",
     image: frontEndPoster,
     link: "http://tinyurl.com/yuhn8evr"
+  },
+  {
+    title: "HCDC BSIT Alumni Organization",
+    description:
+      "Embark on a lifelong learning odyssey with HCDC BSIT Alumni, where our educational journey extends far beyond the confines of school walls. Here, we believe that learning is a continuous adventure, and our alumni community serves as a beacon for intellectual exploration, professional growth, and unwavering camaraderie. Join us as we navigate the ever-evolving landscape of technology and information, proving that the pursuit of knowledge knows no bounds. At HCDC BSIT Alumni, the chapter after graduation is just as compelling as the chapters within the classroom. Together, let’s redefine the narrative of education and shape a future where curiosity knows no limits.",
+    date: "September 18, 2021",
+    image: hcdcbsitalumni,
+    link: "https://hcdcbsitalumni.com/"
   },
   {
     title: "HCDC ITS New Officers 2023",
@@ -105,12 +114,12 @@ export const Publications: React.FC<PublicationsProps> = ({ id }) => {
 
         <div className="flex flex-col md:block lg:flex-row justify-between items-center my-10">
           <div className="h-full lg:mx-5 xl:mx-5 grid grid-cols-1 gap-6"
-           data-aos="fade-up">
+            data-aos="fade-up">
             {currentUpdates.map((update, index) => (
               <div
                 key={index}
                 className="w-[100%] h-full sm:h-full md:h-full lg:h-[300px] xl:h-[300px] lg:w-[95%] box-border border-2 border-[#3a3a3a] block sm:block md:block lg:flex xl:flex flex-row justify-between items-center transition-transform duration-300 ease-in-out hover:scale-105"
-                
+
               >
                 <div className="relative h-[250px] lg:min-w-[300px] xl:min-w-[300px] sm:h-[450px] md:h-[600px] lg:h-full xl:h-full">
                   <Image
@@ -120,10 +129,10 @@ export const Publications: React.FC<PublicationsProps> = ({ id }) => {
                     objectFit="cover"
                   />
                 </div>
-                
+
                 <div className="mx-7 py-8">
                   <h2 className="font-montserrat text-base sm:text-base md:text-lg lg:text-lg font-bold mb-3">{update.title}</h2>
-                  <p className="font-montserrat text-gray-500 text-sm sm:text-sm md:text-sm lg:text-sm">{update.description}</p>
+                  <p className="font-montserrat text-justify indent-6 text-gray-500 text-sm sm:text-sm md:text-sm lg:text-sm">{update.description}</p>
                   <p className="font-montserrat text-gray-400 text-sm sm:text-base lg:text-sm my-4">{update.date}</p>
                   <a href={update.link} target="_blank" className="font-montserrat font-semibold text-sm text-gray-400 my-7 underline cursor-pointer">See More</a>
                 </div>
@@ -137,11 +146,10 @@ export const Publications: React.FC<PublicationsProps> = ({ id }) => {
             <button
               key={index}
               onClick={() => handlePageChange(index + 1)}
-              className={`mx-1 px-4 py-2 ${
-                currentPage === index + 1
-                  ? "font-montserrat font-bold bg-white text-gray-700 border-2 border-white"
-                  : "font-montserrat font-bold bg-transparent text-white border-2 border-[#3a3a3a]"
-              } rounded-md`}
+              className={`mx-1 px-4 py-2 ${currentPage === index + 1
+                ? "font-montserrat font-bold bg-white text-gray-700 border-2 border-white"
+                : "font-montserrat font-bold bg-transparent text-white border-2 border-[#3a3a3a]"
+                } rounded-md`}
             >
               {index + 1}
             </button>
