@@ -109,7 +109,7 @@ export const Publications: React.FC<PublicationsProps> = ({ id }) => {
           <p className="font-montserrat font-regular text-base sm:text-2xl md:text-2xl lg:text-2xl xl:text-3xl">
             Featured updates
           </p>
-          <div className="w-[50%] h-[1.5px] sm:w-[60%] md:w-[64%] lg:w-[73%] xl:w-[76%] bg-[#3a3a3a]"></div>
+          <div className="w-[45%] h-[1.5px] sm:w-[60%] md:w-[64%] lg:w-[73%] xl:w-[76%] bg-[#3a3a3a]"></div>
         </div>
 
         <div className="flex flex-col md:block lg:flex-row justify-between items-center my-10">
