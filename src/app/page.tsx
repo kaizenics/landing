@@ -21,7 +21,7 @@ export default function Home() {
             
               
                 <h1 className="font-montserrat font-bold text-[18px] sm:text-[30px] md:text-[45px] lg:text-[60px] xl:text-[65px] uppercase">
-                  <span className=" bg-gradient-to-r from-[#5a0d0d] via-[#e42121] to-[#5a0d0d] background-animate w-[100%] p-2 sm:px-4 md:px-5 lg:px-5 xl:px-5 rounded-full">Information Technology</span>
+                  <span className=" bg-gradient-to-r from-[#330000] via-[#e42121] to-[#4b0101] background-animate w-[100%] p-2 sm:px-4 md:px-5 lg:px-5 xl:px-5 rounded-full">Information Technology</span>
                 </h1>
   
               <h1 className="font-montserrat mt-1 font-semibold text-5xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-9xl uppercase ">
@@ -30,7 +30,7 @@ export default function Home() {
             </div>
 
             <div className="text-center flex flex-col items-center">
-              <p className="font-montserrat mt-[170px] mb-[30px] text-[15px] md:text-lg">
+              <p className="font-montserrat mt-[100px] mb-[30px] text-[15px] md:text-lg">
                 Scroll down
               </p>
               <MdExpandMore className="w-10 h-10 animate-bounce" />
