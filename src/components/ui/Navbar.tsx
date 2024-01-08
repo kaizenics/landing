@@ -14,13 +14,13 @@ export const Navbar = () => {
   };
 
   return (
-    <Container className="md:flex flex-col lg:flex-row justify-between container md:items-center py-12">
+    <Container className="md:flex flex-row justify-between container md:items-center py-12">
       <div className="flex justify-between items-center">
-        <h4 className="font-montserrat md:text-xl  mb-0 lg:mb-0">HCDC-ITS</h4>
+        <h4 className="font-montserrat md:text-xl lg:text-2xl mb-0 lg:mb-0">HCDC-ITS</h4>
 
-        <div className="lg:hidden">
+        <div className="md:hidden">
           <button
-            className="text-gray-500 hover:text-gray-700 focus:outline-none"
+            className="text-gray-500 hover:text-gray-700 focus:outline-none sm:py-[4px]"
             onClick={toggleMenu}
           >
             <HiOutlineMenuAlt3 className="w-7 h-7"/>
@@ -28,10 +28,9 @@ export const Navbar = () => {
         </div>
       </div>
 
-      <div className="flex md:flex-col lg:flex-row md:items-center space-y-4 lg:space-y-0 lg:space-x-12">
-        {/* Conditionally render links based on screen size */}
+      <div className="flex md:flex-row md:items-center lg:space-y-0 space-x-12 md:space-x-7">
         <ul
-          className={`font-montserrat lg:flex space-x-12 ${
+          className={`font-montserrat lg:text-lg md:text-[15px] md:flex lg:space-x-12 md:space-x-6 ${
             isOpen ? "hidden" : "hidden md:block"
           }`}
         >
@@ -74,7 +73,7 @@ export const Navbar = () => {
         </ul>
 
         <Button
-          className={`font-monserrat text-sm md:text-base transition-opacity duration-300 ease-in-out hover:opacity-70 hidden md:block`}
+          className={`font-monserrat text-sm md:text-base md:transition-opacity duration-300 ease-in-out hover:opacity-70 hidden md:block`}
         >
           Browse Merch
         </Button>
@@ -89,7 +88,7 @@ export const Navbar = () => {
         <ul className="font-montserrat flex flex-col space-y-4">
           <li>
             <Link
-              to="about"
+              to="/about"
               smooth={true}
               duration={500}
               spy={true}
@@ -101,7 +100,7 @@ export const Navbar = () => {
           </li>
           <li>
             <Link
-              to="publications"
+              to="/publications"
               smooth={true}
               duration={500}
               spy={true}

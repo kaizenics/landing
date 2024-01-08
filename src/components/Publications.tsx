@@ -94,25 +94,25 @@ export const Publications: React.FC<PublicationsProps> = ({ id }) => {
     <section id={id}>
       <Container className="container flex flex-col px-6 xl:px-0">
         <div
-          className="flex flex-col-reverse lg:flex-row justify-between items-center py-6"
+          className="flex flex-col-reverse sm:flex-row md:flex-row lg:flex-row justify-between items-center py-6"
           data-aos="fade-up"
         >
-          <p className="font-montserrat font-regular text-3xl">
+          <p className="font-montserrat font-regular text-3xl sm:text-2xl md:text-2xl lg:text-2xl xl:text-3xl">
             Featured updates
           </p>
-          <div className="w-[76%] h-[1.5px] bg-[#3a3a3a]"></div>
+          <div className="w-[76%] h-[1.5px] sm:w-[60%] md:w-[64%] lg:w-[73%] xl:w-[76%] bg-[#3a3a3a]"></div>
         </div>
 
-        <div className="flex flex-col lg:flex-row justify-between items-center my-10">
+        <div className="flex flex-col md:block lg:flex-row justify-between items-center my-10">
           <div className="h-full mx-5 grid grid-cols-1 gap-6"
            data-aos="fade-up">
             {currentUpdates.map((update, index) => (
               <div
                 key={index}
-                className="w-[100%] h-[300px] box-border border-2 border-[#3a3a3a] flex flex-row justify-between items-center transition-transform duration-300 ease-in-out hover:scale-105"
+                className="w-[100%] h-[300px] sm:h-full md:h-full lg:h-[300px] xl:h-[300px]  lg:w-[95%] box-border border-2 border-[#3a3a3a] flex sm:block md:block lg:flex flex-row justify-between items-center transition-transform duration-300 ease-in-out hover:scale-105"
                 
               >
-                <div className="relative min-w-[300px] h-full">
+                <div className="relative min-w-[300px] h-full sm:h-[450px] md:h-[600px] lg:h-full xl:h-full">
                   <Image
                     src={update.image}
                     alt={update.title}
@@ -120,10 +120,11 @@ export const Publications: React.FC<PublicationsProps> = ({ id }) => {
                     objectFit="cover"
                   />
                 </div>
+                
                 <div className="mx-7 py-5">
-                  <h2 className="font-montserrat text-2xl font-bold mb-3">{update.title}</h2>
-                  <p className="font-montserrat text-gray-500">{update.description}</p>
-                  <p className="font-montserrat text-gray-400 my-4">{update.date}</p>
+                  <h2 className="font-montserrat text-2xl sm:text-base md:text-lg lg:text-lg font-bold mb-3">{update.title}</h2>
+                  <p className="font-montserrat text-gray-500 text-lg sm:text-sm md:text-sm lg:text-sm">{update.description}</p>
+                  <p className="font-montserrat text-gray-400 text-lg sm:text-base lg:text-sm my-4">{update.date}</p>
                   <a href={update.link} target="_blank" className="font-montserrat font-semibold text-gray-400 my-7 underline cursor-pointer">See More</a>
                 </div>
               </div>
