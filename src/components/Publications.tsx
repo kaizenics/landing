@@ -97,14 +97,14 @@ export const Publications: React.FC<PublicationsProps> = ({ id }) => {
           className="flex flex-row sm:flex-row md:flex-row lg:flex-row xl:flex-row justify-between items-center py-6"
           data-aos="fade-up"
         >
-          <p className="font-montserrat font-regular text-lg sm:text-2xl md:text-2xl lg:text-2xl xl:text-3xl">
+          <p className="font-montserrat font-regular text-base sm:text-2xl md:text-2xl lg:text-2xl xl:text-3xl">
             Featured updates
           </p>
-          <div className="w-[53%] h-[1.5px] sm:w-[60%] md:w-[64%] lg:w-[73%] xl:w-[76%] bg-[#3a3a3a]"></div>
+          <div className="w-[50%] h-[1.5px] sm:w-[60%] md:w-[64%] lg:w-[73%] xl:w-[76%] bg-[#3a3a3a]"></div>
         </div>
 
         <div className="flex flex-col md:block lg:flex-row justify-between items-center my-10">
-          <div className="h-full mx-5 grid grid-cols-1 gap-6"
+          <div className="h-full lg:mx-5 xl:mx-5 grid grid-cols-1 gap-6"
            data-aos="fade-up">
             {currentUpdates.map((update, index) => (
               <div
@@ -112,7 +112,7 @@ export const Publications: React.FC<PublicationsProps> = ({ id }) => {
                 className="w-[100%] h-full sm:h-full md:h-full lg:h-[300px] xl:h-[300px] lg:w-[95%] box-border border-2 border-[#3a3a3a] block sm:block md:block lg:flex xl:flex flex-row justify-between items-center transition-transform duration-300 ease-in-out hover:scale-105"
                 
               >
-                <div className="relative h-[300px] lg:min-w-[300px] xl:min-w-[300px] sm:h-[450px] md:h-[600px] lg:h-full xl:h-full">
+                <div className="relative h-[250px] lg:min-w-[300px] xl:min-w-[300px] sm:h-[450px] md:h-[600px] lg:h-full xl:h-full">
                   <Image
                     src={update.image}
                     alt={update.title}
@@ -121,7 +121,7 @@ export const Publications: React.FC<PublicationsProps> = ({ id }) => {
                   />
                 </div>
                 
-                <div className="mx-7 py-10">
+                <div className="mx-7 py-8">
                   <h2 className="font-montserrat text-base sm:text-base md:text-lg lg:text-lg font-bold mb-3">{update.title}</h2>
                   <p className="font-montserrat text-gray-500 text-sm sm:text-sm md:text-sm lg:text-sm">{update.description}</p>
                   <p className="font-montserrat text-gray-400 text-sm sm:text-base lg:text-sm my-4">{update.date}</p>
