@@ -123,8 +123,8 @@ export const Publications: React.FC<PublicationsProps> = ({ id }) => {
                 
                 <div className="mx-5 py-8">
                   <h2 className="font-montserrat text-sm sm:text-base md:text-lg lg:text-lg font-bold mb-3">{update.title}</h2>
-                  <p className="font-montserrat text-gray-500 text-sm sm:text-sm md:text-sm lg:text-sm">{update.description}</p>
-                  <p className="font-montserrat text-gray-400 text-sm sm:text-base lg:text-sm my-4">{update.date}</p>
+                  <p className="font-montserrat text-gray-500 text-[12px] sm:text-sm md:text-sm lg:text-sm">{update.description}</p>
+                  <p className="font-montserrat text-gray-400 text-[12px] sm:text-base lg:text-sm my-4">{update.date}</p>
                   <a href={update.link} target="_blank" className="font-montserrat font-semibold text-sm text-gray-400 my-7 underline cursor-pointer">See More</a>
                 </div>
               </div>
