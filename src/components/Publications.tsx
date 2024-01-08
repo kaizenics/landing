@@ -100,7 +100,7 @@ export const Publications: React.FC<PublicationsProps> = ({ id }) => {
           <p className="font-montserrat font-regular text-base sm:text-2xl md:text-2xl lg:text-2xl xl:text-3xl">
             Featured updates
           </p>
-          <div className="w-[50%] h-[1.5px] sm:w-[60%] md:w-[64%] lg:w-[73%] xl:w-[76%] bg-[#3a3a3a]"></div>
+          <div className="w-[45%] h-[1.5px] sm:w-[60%] md:w-[64%] lg:w-[73%] xl:w-[76%] bg-[#3a3a3a]"></div>
         </div>
 
         <div className="flex flex-col md:block lg:flex-row justify-between items-center my-10">
@@ -121,8 +121,8 @@ export const Publications: React.FC<PublicationsProps> = ({ id }) => {
                   />
                 </div>
                 
-                <div className="mx-7 py-8">
-                  <h2 className="font-montserrat text-base sm:text-base md:text-lg lg:text-lg font-bold mb-3">{update.title}</h2>
+                <div className="mx-5 py-8">
+                  <h2 className="font-montserrat text-sm sm:text-base md:text-lg lg:text-lg font-bold mb-3">{update.title}</h2>
                   <p className="font-montserrat text-gray-500 text-sm sm:text-sm md:text-sm lg:text-sm">{update.description}</p>
                   <p className="font-montserrat text-gray-400 text-sm sm:text-base lg:text-sm my-4">{update.date}</p>
                   <a href={update.link} target="_blank" className="font-montserrat font-semibold text-sm text-gray-400 my-7 underline cursor-pointer">See More</a>
