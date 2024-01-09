@@ -23,7 +23,7 @@ const updates = [
       "Are you passionate about Web Development, with a keen interest in both Designing and Programming? This comprehensive guide is tailored for individuals like you, providing a clear path to becoming a proficient Front-end Web Developer",
     date: "September 18, 2021",
     image: frontEndPoster,
-    link: "http://tinyurl.com/yuhn8evr"
+    link: "http://tinyurl.com/yuhn8evr",
   },
   {
     title: "HCDC BSIT Alumni Organization",
@@ -31,7 +31,7 @@ const updates = [
       "Embark on a lifelong learning odyssey with HCDC BSIT Alumni, where our educational journey extends far beyond the confines of school walls. Here, we believe that learning is a continuous adventure, and our alumni community serves as a beacon for intellectual exploration, professional growth, and unwavering camaraderie. Join us as we navigate the ever-evolving landscape of technology and information, proving that the pursuit of knowledge knows no bounds. At HCDC BSIT Alumni, the chapter after graduation is just as compelling as the chapters within the classroom. Together, let’s redefine the narrative of education and shape a future where curiosity knows no limits.",
     date: "September 18, 2021",
     image: hcdcbsitalumni,
-    link: "https://hcdcbsitalumni.com/"
+    link: "https://hcdcbsitalumni.com/",
   },
   {
     title: "HCDC ITS New Officers 2023",
@@ -39,7 +39,7 @@ const updates = [
       "We are excited to have such talented individuals on board, and we are confident that they will continue to uphold the club's mission of promoting innovation and excellence in the field of information technology. Best of luck to our new leaders as they take on this important role!",
     date: "September 18, 2021",
     image: officers,
-    link: "http://tinyurl.com/44btcmau"
+    link: "http://tinyurl.com/44btcmau",
   },
   {
     title: "ITS Membership",
@@ -47,7 +47,7 @@ const updates = [
       "Lorem ipsum dolor sit amet, consectetur adnpmipiscing elit. Donec vel libero at lectus rutrum vestibulum vitae ut turpis. Ut ultricies pulvinar posuere.",
     date: "September 18, 2021",
     image: itsMem,
-    link: "https://www.facebook.com/HCDCITS/photos/a.10150174591300054/10160194599660054/"
+    link: "https://www.facebook.com/HCDCITS/photos/a.10150174591300054/10160194599660054/",
   },
   {
     title: "PSITS XI: Festival of Talents 2024",
@@ -55,7 +55,7 @@ const updates = [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel libero at lectus rutrum vestibulum vitae ut turpis. Ut ultricies pulvinar posuere.",
     date: "September 18, 2021",
     image: psitsPub,
-    link: "https://www.facebook.com/HCDCITS/photos/a.10150174591300054/10160194599660054/"
+    link: "https://www.facebook.com/HCDCITS/photos/a.10150174591300054/10160194599660054/",
   },
   {
     title: "CET Shirt Payment",
@@ -63,7 +63,7 @@ const updates = [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel libero at lectus rutrum vestibulum vitae ut turpis. Ut ultricies pulvinar posuere.",
     date: "September 18, 2021",
     image: cetShirt,
-    link: "https://www.facebook.com/HCDCITS/photos/a.10150174591300054/10160194599660054/"
+    link: "https://www.facebook.com/HCDCITS/photos/a.10150174591300054/10160194599660054/",
   },
   {
     title: "Bakit nag IT ang Beshy Ko?",
@@ -71,7 +71,7 @@ const updates = [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel libero at lectus rutrum vestibulum vitae ut turpis. Ut ultricies pulvinar posuere.",
     date: "September 18, 2021",
     image: beshyKo,
-    link: "https://www.facebook.com/HCDCITS/photos/a.10150174591300054/10160194599660054/q"
+    link: "https://www.facebook.com/HCDCITS/photos/a.10150174591300054/10160194599660054/q",
   },
 ];
 
@@ -120,7 +120,6 @@ export const Publications: React.FC<PublicationsProps> = ({ id }) => {
               <div
                 key={index}
                 className="w-[100%] h-full sm:h-full md:h-full lg:h-[300px] xl:h-[300px] lg:w-[95%] box-border border-2 border-[#3a3a3a] block sm:block md:block lg:flex xl:flex flex-row justify-between items-center transition-transform duration-300 ease-in-out hover:scale-105"
-
               >
                 <div className="relative h-[250px] lg:min-w-[300px] xl:min-w-[300px] sm:h-[450px] md:h-[600px] lg:h-full xl:h-full">
                   <Image
@@ -132,10 +131,24 @@ export const Publications: React.FC<PublicationsProps> = ({ id }) => {
                 </div>
 
                 <div className="mx-7 py-8">
-                  <h2 className="font-montserrat text-base sm:text-base md:text-lg lg:text-lg font-bold mb-3">{update.title}</h2>
-                  <p className="font-montserrat text-justify indent-6 text-gray-500 text-sm sm:text-sm md:text-sm lg:text-sm">{update.description}</p>
-                  <p className="font-montserrat text-gray-400 text-sm sm:text-base lg:text-sm my-4">{update.date}</p>
-                  <a href={update.link} target="_blank" className="font-montserrat font-semibold text-sm text-gray-400 my-7 underline cursor-pointer">See More</a>
+                  <h2 className="font-montserrat text-base sm:text-base md:text-lg lg:text-lg font-bold mb-3">
+                    {update.title}
+                  </h2>
+                  <p className="font-montserrat text-justify text-gray-500 text-sm sm:text-sm md:text-sm lg:text-sm">
+                    {update.description.length > 255
+                      ? `${update.description.substring(0, 255)}...`
+                      : update.description}
+                  </p>
+                  <p className="font-montserrat text-gray-400 text-sm sm:text-base lg:text-sm my-4">
+                    {update.date}
+                  </p>
+                  <a
+                    href={update.link}
+                    target="_blank"
+                    className="font-montserrat font-semibold text-sm text-gray-400 my-7 underline cursor-pointer"
+                  >
+                    See More
+                  </a>
                 </div>
               </div>
             ))} */}
@@ -148,10 +161,11 @@ export const Publications: React.FC<PublicationsProps> = ({ id }) => {
             <button
               key={index}
               onClick={() => handlePageChange(index + 1)}
-              className={`mx-1 px-4 py-2 ${currentPage === index + 1
-                ? "font-montserrat font-bold bg-white text-gray-700 border-2 border-white"
-                : "font-montserrat font-bold bg-transparent text-white border-2 border-[#3a3a3a]"
-                } rounded-md`}
+              className={`mx-1 px-4 py-2 ${
+                currentPage === index + 1
+                  ? "font-montserrat font-bold bg-white text-gray-700 border-2 border-white"
+                  : "font-montserrat font-bold bg-transparent text-white border-2 border-[#3a3a3a]"
+              } rounded-md`}
             >
               {index + 1}
             </button>

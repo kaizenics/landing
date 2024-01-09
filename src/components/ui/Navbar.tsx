@@ -60,7 +60,7 @@ export const Navbar = () => {
           </li>
           <li>
             <Link
-              to="contributors"
+              to="#contributors"
               smooth={true}
               duration={500}
               spy={true}
@@ -88,7 +88,7 @@ export const Navbar = () => {
         <ul className="font-montserrat flex flex-col space-y-4">
           <li>
             <Link
-              to="/about"
+              to="about"
               smooth={true}
               duration={500}
               spy={true}
@@ -100,7 +100,7 @@ export const Navbar = () => {
           </li>
           <li>
             <Link
-              to="/publications"
+              to="publications"
               smooth={true}
               duration={500}
               spy={true}
