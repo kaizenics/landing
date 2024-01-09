@@ -10,11 +10,12 @@ const inter = Inter({ subsets: ['latin'] })
 export const metadata: Metadata = {
   title: 'HCDC Information Technology Society',
   description: 'HCDC Information Technology Society Unofficial Publication Website',
+  // meta tags for social share links
   openGraph: {
     title: 'HCDC Information Technology Society',
     type: 'website',
-    url: 'hcdc-its.vercel.app', // replace with your website URL
-    images: 'https://i.imgur.com/YvFWkKb.png', // replace with the URL of the image you want to display when your website is shared
+    url: 'hcdc-its.vercel.app',
+    images: 'https://i.imgur.com/YvFWkKb.png',
     description: 'HCDC Information Technology Society Unofficial Publication Website',
   }
 }
