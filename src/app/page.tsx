@@ -41,6 +41,8 @@ export default function Home() {
         </section>
 
         <About id="about" />
+
+
         <Publications id="publications" />
       </main>
     </>

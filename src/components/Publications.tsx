@@ -112,10 +112,11 @@ export const Publications: React.FC<PublicationsProps> = ({ id }) => {
           <div className="w-[45%] h-[1.5px] sm:w-[60%] md:w-[64%] lg:w-[73%] xl:w-[76%] bg-[#3a3a3a]"></div>
         </div>
 
-        <div className="flex flex-col md:block lg:flex-row justify-between items-center my-10">
-          <div className="h-full lg:mx-5 xl:mx-5 grid grid-cols-1 gap-6"
+        <div className="flex flex-col md:block lg:flex-row justify-center align-middle items-center my-10">
+          <div className="h-full lg:mx-5 xl:mx-5 grid-cols-1 gap-6 flex justify-center"
             data-aos="fade-up">
-            {currentUpdates.map((update, index) => (
+            <div className="fb-page" data-href="https://www.facebook.com/hcdcits" data-lazy="true" data-tabs="timeline" data-width="500" data-height="" data-small-header="false" data-adapt-container-width="false" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/hcdcits" className="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/hcdcits">HCDC Information Technology Society</a></blockquote></div>
+            {/* {currentUpdates.map((update, index) => (
               <div
                 key={index}
                 className="w-[100%] h-full sm:h-full md:h-full lg:h-[300px] xl:h-[300px] lg:w-[95%] box-border border-2 border-[#3a3a3a] block sm:block md:block lg:flex xl:flex flex-row justify-between items-center transition-transform duration-300 ease-in-out hover:scale-105"
@@ -137,11 +138,12 @@ export const Publications: React.FC<PublicationsProps> = ({ id }) => {
                   <a href={update.link} target="_blank" className="font-montserrat font-semibold text-sm text-gray-400 my-7 underline cursor-pointer">See More</a>
                 </div>
               </div>
-            ))}
+            ))} */}
+
           </div>
         </div>
 
-        <div className="flex justify-center my-4">
+        {/* <div className="flex justify-center my-4">
           {Array.from({ length: totalPages }, (_, index) => (
             <button
               key={index}
@@ -154,7 +156,7 @@ export const Publications: React.FC<PublicationsProps> = ({ id }) => {
               {index + 1}
             </button>
           ))}
-        </div>
+        </div> */}
       </Container>
     </section>
   );
