@@ -75,11 +75,11 @@ const updates = [
   },
 ];
 
-interface PublicationsProps {
+interface FacebookPageProps {
   id: string;
 }
 
-export const Publications: React.FC<PublicationsProps> = ({ id }) => {
+export const FacebookPage: React.FC<FacebookPageProps> = ({ id }) => {
   const [currentPage, setCurrentPage] = useState(1);
 
   const indexOfLastUpdate = currentPage * updatesPerPage;
@@ -107,68 +107,27 @@ export const Publications: React.FC<PublicationsProps> = ({ id }) => {
           data-aos="fade-up"
         >
           <p className="font-montserrat font-regular text-base sm:text-2xl md:text-2xl lg:text-2xl xl:text-3xl">
-            Featured updates
+            Facebook Page
           </p>
           <div className="w-[45%] h-[1.5px] sm:w-[60%] md:w-[64%] lg:w-[73%] xl:w-[76%] bg-[#3a3a3a]"></div>
         </div>
 
-        <div className="flex flex-col md:block lg:flex-row justify-between items-center my-10">
-          <div
-            className="h-full lg:mx-5 xl:mx-5 grid grid-cols-1 gap-6"
-            data-aos="fade-up"
-          >
-            {currentUpdates.map((update, index) => (
-              <div
-                key={index}
-                className="w-[100%] h-full sm:h-full md:h-full lg:h-[300px] xl:h-[300px] lg:w-[95%] box-border border-2 border-[#3a3a3a] block sm:block md:block lg:flex xl:flex flex-row justify-between items-center transition-transform duration-300 ease-in-out hover:scale-105"
-              >
-                <div className="relative h-[250px] lg:min-w-[300px] xl:min-w-[300px] sm:h-[450px] md:h-[600px] lg:h-full xl:h-full">
-                  <Image
-                    src={update.image}
-                    alt={update.title}
-                    layout="fill"
-                    objectFit="cover"
-                  />
-                </div>
-
-                <div className="mx-7 py-8">
-                  <h2 className="font-montserrat text-base sm:text-base md:text-lg lg:text-lg font-bold mb-3">
-                    {update.title}
-                  </h2>
-                  <p className="font-montserrat text-justify text-gray-500 text-sm sm:text-sm md:text-sm lg:text-sm">
-                    {update.description.length > 255
-                      ? `${update.description.substring(0, 255)}...`
-                      : update.description}
-                  </p>
-                  <p className="font-montserrat text-gray-400 text-sm sm:text-base lg:text-sm my-4">
-                    {update.date}
-                  </p>
-                  <a
-                    href={update.link}
-                    target="_blank"
-                    className="font-montserrat font-semibold text-sm text-gray-400 my-7 underline cursor-pointer"
-                  >
-                    See More
-                  </a>
-                </div>
-              </div>
-            ))}
+        <div className="flex flex-col md:block lg:flex-row justify-center align-middle items-center my-10">
+          <div className="h-full lg:mx-5 xl:mx-5 grid-cols-1 gap-6 flex justify-center"
+            data-aos="fade-up">
+            {/**
+               * 
+               *  NO FIX YET plsfix
+               *  ❎embed wont render if user has
+               *  - adblock
+               * 
+               *  wont render on chrome (renders well on chrome incognito mode)
+               *  ✅ renders on firefox
+               * 
+               *  NOTE: max width allowed for embed is 500px ONLY!!!
+               */}
+            <div className="fb-page" data-href="https://www.facebook.com/hcdcits" data-lazy="true" data-tabs="timeline" data-width="500" data-height="" data-small-header="false" data-adapt-container-width="false" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/hcdcits" className="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/hcdcits">HCDC Information Technology Society</a></blockquote></div>
           </div>
-        </div>
-
-        <div className="flex justify-center my-4">
-          {Array.from({ length: totalPages }, (_, index) => (
-            <button
-              key={index}
-              onClick={() => handlePageChange(index + 1)}
-              className={`mx-1 px-4 py-2 ${currentPage === index + 1
-                  ? "font-montserrat font-bold bg-white text-gray-700 border-2 border-white"
-                  : "font-montserrat font-bold bg-transparent text-white border-2 border-[#3a3a3a]"
-                } rounded-md`}
-            >
-              {index + 1}
-            </button>
-          ))}
         </div>
       </Container>
     </section>
