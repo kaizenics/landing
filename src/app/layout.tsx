@@ -4,7 +4,6 @@ import './globals.css'
 import { Navbar } from '~/components/ui/Navbar'
 import { Scroll } from "~/components/ui/Scroll";
 import { Footer } from '~/components/ui/Footer';
-import itsLogo from "~/assets/images/ITS-LOGO-REMASTERED-BIG.png";
 
 const inter = Inter({ subsets: ['latin'] })
 
