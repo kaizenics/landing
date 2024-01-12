@@ -6,6 +6,9 @@ import { Container } from "~/components/ui/Container";
 import { Link } from "react-scroll/modules";
 import { HiOutlineMenuAlt3 } from "react-icons/hi";
 
+import itsLogo from "~/assets/images/ITS-LOGO-REMASTERED-BIG.png";
+import Image from 'next/image';
+
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -16,23 +19,28 @@ export const Navbar = () => {
   return (
     <Container className="md:flex flex-row justify-between container md:items-center py-12">
       <div className="flex justify-between items-center">
-        <h4 className="font-montserrat md:text-xl lg:text-2xl mb-0 lg:mb-0">HCDC-ITS</h4>
+        <Image
+          src={itsLogo}
+          alt={"itsLogo"}
+          className="h-14 w-auto pr-2"
+
+        />
+        <h4 className="font-montserrat md:text-xl lg:text-2xl mb-0 lg:mb-0">HCDC Information Technology Society</h4>
 
         <div className="md:hidden">
           <button
             className="text-gray-500 hover:text-gray-700 focus:outline-none sm:py-[4px]"
             onClick={toggleMenu}
           >
-            <HiOutlineMenuAlt3 className="w-7 h-7"/>
+            <HiOutlineMenuAlt3 className="w-7 h-7" />
           </button>
         </div>
       </div>
 
       <div className="flex md:flex-row md:items-center lg:space-y-0 space-x-12 md:space-x-7">
         <ul
-          className={`font-montserrat lg:text-lg md:text-[15px] md:flex lg:space-x-12 md:space-x-6 ${
-            isOpen ? "hidden" : "hidden md:block"
-          }`}
+          className={`font-montserrat lg:text-lg md:text-[15px] md:flex lg:space-x-12 md:space-x-6 ${isOpen ? "hidden" : "hidden md:block"
+            }`}
         >
           <li>
             <Link
@@ -43,7 +51,7 @@ export const Navbar = () => {
               offset={-70}
               className="transition-opacity duration-300 ease-in-out hover:opacity-70 cursor-pointer"
             >
-              about
+              About
             </Link>
           </li>
           <li>
@@ -55,7 +63,7 @@ export const Navbar = () => {
               offset={-70}
               className="transition-opacity duration-300 ease-in-out hover:opacity-70 cursor-pointer"
             >
-              featured
+              Featured
             </Link>
           </li>
           <li>
@@ -67,7 +75,7 @@ export const Navbar = () => {
               offset={-70}
               className="transition-opacity duration-300 ease-in-out hover:opacity-70 cursor-pointer"
             >
-              contributors
+              Contributors
             </Link>
           </li>
         </ul>
@@ -81,9 +89,8 @@ export const Navbar = () => {
 
       {/* BEGIN: Mobile Menu */}
       <div
-        className={`lg:hidden ${
-          isOpen ? "block" : "hidden"
-        } flex flex-col items-end py-5 px-2 text-right space-y-4`}
+        className={`lg:hidden ${isOpen ? "block" : "hidden"
+          } flex flex-col items-end py-5 px-2 text-right space-y-4`}
       >
         <ul className="font-montserrat flex flex-col space-y-4">
           <li>
