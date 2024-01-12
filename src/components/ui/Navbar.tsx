@@ -4,10 +4,7 @@ import { useState } from "react";
 import { Button } from "~/components/ui/Button";
 import { Container } from "~/components/ui/Container";
 import { Link } from "react-scroll/modules";
-import { HiOutlineMenuAlt3 } from "react-icons/hi";
-
-import itsLogo from "~/assets/images/ITS-LOGO-REMASTERED-BIG.png";
-import Image from 'next/image';
+import { HiOutlineMenuAlt3 } from "react-icons/hi";scrollbars
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -19,13 +16,8 @@ export const Navbar = () => {
   return (
     <Container className="md:flex flex-row justify-between container md:items-center py-12">
       <div className="flex justify-between items-center">
-        <Image
-          src={itsLogo}
-          alt={"itsLogo"}
-          className="h-14 w-auto pr-2"
-
-        />
-        <h4 className="font-montserrat md:text-xl lg:text-2xl mb-0 lg:mb-0">HCDC Information Technology Society</h4>
+      
+        <h4 className="font-montserrat md:text-xl lg:text-2xl mb-0 lg:mb-0">HCDC-ITS</h4>
 
         <div className="md:hidden">
           <button
