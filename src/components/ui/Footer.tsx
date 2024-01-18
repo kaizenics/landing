@@ -14,6 +14,7 @@ export const Footer = () => {
             })
             .catch(error => console.error(error));
     }, []);
+    
     return (
         <section>
             <footer className="">

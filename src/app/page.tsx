@@ -5,7 +5,6 @@ import { Publications } from "~/components/Publications";
 import { Container } from "~/components/ui/Container";
 import { MdExpandMore } from "react-icons/md";
 import "./index.css"
-import { FacebookPage } from "~/components/FacebookPage";
 
 export default function Home() {
   return (
@@ -40,8 +39,6 @@ export default function Home() {
         </section>
 
         <About id="about" />
-
-        <FacebookPage id="facebookpage" />
         <Publications id="publications" />
 
       </main>
