@@ -1,5 +1,7 @@
 "use client";
 
+import { Container } from "~/components/ui/Container";
+import { Separator } from "~/components/ui/Separator";
 import { useEffect } from 'react'
 import { IoArrowForward } from "react-icons/io5";
 import AOS from "aos";
@@ -17,13 +19,16 @@ export const About: React.FC<AboutProps> = ({ id }) => {
   }, []);
 
   return (
-    <section id={id} className="mt-[35%] mb-96"  data-aos="fade-up">
-      <div className="grid lg:grid-cols-2 gap-0 py-14 mx-auto border-t-2 border-[#3a3a3a]"
+   
+    <section id={id} className="mt-[35%] mb-24"  data-aos="fade-up">
+      <Separator/>
+      <Container className="container flex flex-col">
+      <div className="grid lg:grid-cols-2 gap-0 py-14 mx-auto"
       data-aos="fade-up"
       >
-          <div className="m-10 sm:m-10 md:m-10 lg:w-3/4 lg:ml-28 xl:w-3/4 xl:ml-40">
-            <h3 className="font-montserrat font-regular text-2xl sm:text-3xl md:text-3xl lg:text-4xl xl:text-5xl mb-8">
-              About us
+          <div className="m-10 sm:m-10 md:m-10 lg:w-3/4 lg:ml-28 xl:w-5/6 xl:ml-24">
+            <h3 className="font-montserrat font-semibold text-2xl sm:text-3xl md:text-3xl lg:text-4xl xl:text-3xl mb-8">
+              <span className="bg-[#960202] p-2">About</span>
             </h3>
             <p className="font-montserrat font-regular text-md sm:text-2xl md:text-2xl lg:text-2xl xl:text-3xl  text-left">
               The{" "}
@@ -42,9 +47,9 @@ export const About: React.FC<AboutProps> = ({ id }) => {
             </div>
         </div>
 
-          <div className="m-10 sm:m-10 md:m-10 lg:w-3/4 xl:w-3/4">
-            <h3 className="font-montserrat font-regular text-2xl lg:text-4xl xl:text-5xl mb-8">
-              Our Mission
+          <div className="m-10 sm:m-10 md:m-10 lg:w-3/4 xl:w-5/6">
+            <h3 className="font-montserrat font-semibold text-2xl lg:text-4xl xl:text-3xl mb-8">
+              <span className="bg-[#960202] p-2">Mission</span>
             </h3>
             <p className="font-montserrat font-regular text-md sm:text-2xl md:text-2xl lg:text-2xl xl:text-3xl text-left">
               To provide opportunities for students to enhance their IT skills,
@@ -54,6 +59,7 @@ export const About: React.FC<AboutProps> = ({ id }) => {
           </div>
 
       </div>
+      </Container>
     </section>
   );
 };

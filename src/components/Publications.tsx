@@ -103,13 +103,12 @@ export const Publications: React.FC<PublicationsProps> = ({ id }) => {
     <section id={id}>
       <Container className="container flex flex-col px-6 xl:px-0">
         <div
-          className="flex flex-row sm:flex-row md:flex-row lg:flex-row xl:flex-row justify-between items-center py-6"
+          className="mt-20 mb-10"
           data-aos="fade-up"
         >
-          <p className="font-montserrat font-regular text-base sm:text-2xl md:text-2xl lg:text-2xl xl:text-3xl">
-            Featured updates
+          <p className="font-montserrat font-semibold text-base sm:text-2xl md:text-2xl lg:text-2xl xl:text-3xl">
+            <span className="bg-[#960202] p-2">Featured updates</span>
           </p>
-          <div className="w-[45%] h-[1.5px] sm:w-[60%] md:w-[64%] lg:w-[73%] xl:w-[76%] bg-[#3a3a3a]"></div>
         </div>
 
         <div className="flex flex-col md:block lg:flex-row justify-between items-center my-10">
@@ -135,7 +134,7 @@ export const Publications: React.FC<PublicationsProps> = ({ id }) => {
                   <h2 className="font-montserrat text-base sm:text-base md:text-lg lg:text-lg font-bold mb-3">
                     {update.title}
                   </h2>
-                  <p className="font-montserrat text-justify text-gray-500 text-sm sm:text-sm md:text-sm lg:text-sm">
+                  <p className="font-montserrat text-justify text-gray-500 text-sm sm:text-sm md:text-sm lg:text-sm hidden">
                     {update.description.length > 255
                       ? `${update.description.substring(0, 255)}...`
                       : update.description}

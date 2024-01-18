@@ -1,6 +1,8 @@
 
 
 import { About } from "~/components/About";
+import Officers from "~/components/Officers";
+import { Separator } from "~/components/ui/Separator";
 import { Publications } from "~/components/Publications";
 import { Container } from "~/components/ui/Container";
 import { MdExpandMore } from "react-icons/md";
@@ -38,7 +40,11 @@ export default function Home() {
           </Container>
         </section>
 
+        
         <About id="about" />
+        <Separator/>
+        <Officers />
+        <Separator/>
         <Publications id="publications" />
 
       </main>
