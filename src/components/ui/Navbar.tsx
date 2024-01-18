@@ -4,7 +4,7 @@ import { useState } from "react";
 import { Button } from "~/components/ui/Button";
 import { Container } from "~/components/ui/Container";
 import { Link } from "react-scroll/modules";
-import { HiOutlineMenuAlt3 } from "react-icons/hi";scrollbars
+import { HiOutlineMenuAlt3 } from "react-icons/hi";
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
