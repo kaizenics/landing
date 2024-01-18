@@ -23,10 +23,10 @@ export const About: React.FC<AboutProps> = ({ id }) => {
     <section id={id} className="mt-[35%] mb-24"  data-aos="fade-up">
       <Separator/>
       <Container className="container flex flex-col">
-      <div className="grid lg:grid-cols-2 gap-0 py-14 mx-auto"
+      <div className="grid lg:grid-cols-2 gap-0 py-14 mx-auto mt-10"
       data-aos="fade-up"
       >
-          <div className="m-10 sm:m-10 md:m-10 lg:w-3/4 lg:ml-28 xl:w-5/6 xl:ml-24">
+          <div className="mb-14 m-0">
             <h3 className="font-montserrat font-semibold text-2xl sm:text-3xl md:text-3xl lg:text-4xl xl:text-3xl mb-8">
               <span className="bg-[#960202] p-2">About</span>
             </h3>
@@ -47,7 +47,7 @@ export const About: React.FC<AboutProps> = ({ id }) => {
             </div>
         </div>
 
-          <div className="m-10 sm:m-10 md:m-10 lg:w-3/4 xl:w-5/6">
+          <div className="m-0 lg:ml-10 xl:ml-10">
             <h3 className="font-montserrat font-semibold text-2xl lg:text-4xl xl:text-3xl mb-8">
               <span className="bg-[#960202] p-2">Mission</span>
             </h3>
