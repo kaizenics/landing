@@ -30,7 +30,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="text-white bg-[#151515]">
-      <link rel="icon" href="/favicon.ico" sizes="any" />
+      <link rel="icon" href="/logo.png" sizes="any" />
       {/**
        * 
        *  IMPORT NEEDED TO EMBED FACEBOOK PAGE

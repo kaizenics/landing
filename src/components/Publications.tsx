@@ -107,7 +107,7 @@ export const Publications: React.FC<PublicationsProps> = ({ id }) => {
           data-aos="fade-up"
         >
           <p className="font-montserrat font-semibold text-base sm:text-2xl md:text-2xl lg:text-2xl xl:text-3xl">
-            <span className="bg-[#960202] p-2">Featured updates</span>
+            <span className="bg-[#960202] p-2 rounded-xl">featured updates</span>
           </p>
         </div>
 
