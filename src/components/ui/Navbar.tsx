@@ -33,7 +33,7 @@ export const Navbar = () => {
         </div>
       </div>
 
-      <div className="flex md:flex-row md:items-center lg:space-y-0 space-x-12 md:space-x-7">
+      <div className="flex md:flex-row md:items-center lg:space-y-0 space-x-12 md:space-x-8 xl:space-x-16">
         <ul
           className={`font-montserrat lg:text-lg md:text-[15px] md:flex lg:space-x-12 md:space-x-6 ${isOpen ? "hidden" : "hidden md:block"
             }`}
@@ -47,7 +47,7 @@ export const Navbar = () => {
               offset={-70}
               className="transition-opacity duration-300 ease-in-out hover:opacity-70 cursor-pointer"
             >
-              About
+              about
             </Link>
           </li>
           <li>
@@ -59,7 +59,7 @@ export const Navbar = () => {
               offset={-70}
               className="transition-opacity duration-300 ease-in-out hover:opacity-70 cursor-pointer"
             >
-              Featured
+              featured
             </Link>
           </li>
           <li>
@@ -71,7 +71,7 @@ export const Navbar = () => {
               offset={-70}
               className="transition-opacity duration-300 ease-in-out hover:opacity-70 cursor-pointer"
             >
-              Contributors
+              contributors
             </Link>
           </li>
         </ul>

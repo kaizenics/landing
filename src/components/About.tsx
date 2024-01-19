@@ -28,7 +28,7 @@ export const About: React.FC<AboutProps> = ({ id }) => {
       >
           <div className="mb-14 m-0">
             <h3 className="font-montserrat font-semibold text-2xl sm:text-3xl md:text-3xl lg:text-4xl xl:text-3xl mb-8">
-              <span className="bg-[#960202] p-2">About</span>
+              <span className="bg-[#960202] p-2 rounded-xl">about</span>
             </h3>
             <p className="font-montserrat font-regular text-md sm:text-2xl md:text-2xl lg:text-2xl xl:text-3xl  text-left">
               The{" "}
@@ -49,7 +49,7 @@ export const About: React.FC<AboutProps> = ({ id }) => {
 
           <div className="m-0 lg:ml-10 xl:ml-10">
             <h3 className="font-montserrat font-semibold text-2xl lg:text-4xl xl:text-3xl mb-8">
-              <span className="bg-[#960202] p-2">Mission</span>
+              <span className="bg-[#960202] p-2 rounded-xl">mission</span>
             </h3>
             <p className="font-montserrat font-regular text-md sm:text-2xl md:text-2xl lg:text-2xl xl:text-3xl text-left">
               To provide opportunities for students to enhance their IT skills,

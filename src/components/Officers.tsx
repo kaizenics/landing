@@ -10,23 +10,18 @@ export const Officers = () => {
     <>
       <main>
         <Container className="container flex px-6 xl:px-0">
-          <div className="container flex items-center justify-center space-x-8 my-20">
-              <div className="relative w-[300px] h-[300px]">
-                <Image
-                  src={itslogo}
-                  alt="HCDC-ITS Logo"
-                  layout="fill"
-                  objectFit="cover"
-                />
-              </div>
-         
-            <h1 className="font-montserrat font-semibold text-[18px] sm:text-[30px] md:text-[45px] lg:text-[60px] xl:text-3xl">
-              <span className="bg-[#960202] p-2 sm:px-4 md:px-5 lg:px-5 xl:px-5">
-                Introduction of Officers
+          <div className="container justify-start my-20">
+            <h1 className="font-montserrat font-semibold text-[18px] sm:text-[30px] md:text-[45px] lg:text-[60px] xl:text-5xl">
+              <span className="bg-[#960202] p-2 sm:px-4 md:px-5 lg:px-5 xl:px-5 rounded-xl">
+                meet the team
               </span>
-            </h1>
+              </h1>
+            <p className="font-montserrat font-regular text-2xl my-10">
+              Information Technology Society Student Organization Current Officers
+            </p>
           </div>
-    
+          
+          
         </Container>
       </main>
     </>
