@@ -58,9 +58,10 @@ export const Contributors: React.FC<ContributorsProps> = ({ id }) => {
                             className="flex flex-row h-full lg:mx-5 xl:mx-5 gap-4"
                             data-aos="fade-up"
                         >
+
                             {contributors.map((contributor, index) => (
                                 <div
-
+                                    key={index}
                                     className="w-[100%] h-full sm:h-full md:h-full lg:h-[300px] xl:h-[525px] lg:w-[25%] box-border border-2 border-[#3a3a3a] block sm:block md:block lg:flex xl:flex flex-col justify-between items-center transition-transform duration-300 ease-in-out "
                                 >
                                     <div className="relative h-[20px] lg:min-w-[300px] xl:min-w-[300px] sm:h-[450px] md:h-[600px] lg:h-full xl:h-full">
