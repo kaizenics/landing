@@ -31,15 +31,6 @@ export default function RootLayout({
   return (
     <html lang="en" className="text-white bg-[#151515]">
       <link rel="icon" href="/favicon.ico" sizes="any" />
-      {/**
-       * 
-       *  IMPORT NEEDED TO EMBED FACEBOOK PAGE
-       *  DO NOT REMOVE!
-       * 
-       */}
-      <div id="fb-root"></div>
-      <script async defer crossOrigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v18.0" nonce="yhg7GYaV"></script>
-      {/*  */}
       <body className={inter.className}>
         <Navbar />
         {children}

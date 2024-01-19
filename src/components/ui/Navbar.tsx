@@ -64,7 +64,7 @@ export const Navbar = () => {
           </li>
           <li>
             <Link
-              to="#contributors"
+              to="contributors"
               smooth={true}
               duration={500}
               spy={true}
