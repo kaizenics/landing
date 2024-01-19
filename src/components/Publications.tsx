@@ -111,15 +111,15 @@ export const Publications: React.FC<PublicationsProps> = ({ id }) => {
           </p>
         </div>
 
-        <div className="flex flex-col md:block lg:flex-row justify-between items-center my-10">
+        <div className="flex flex-row md:block lg:flex-row justify-between items-center my-10">
           <div
             className="h-full lg:mx-5 xl:mx-5 grid grid-cols-1 gap-6"
-            data-aos="fade-up"
           >
             {currentUpdates.map((update, index) => (
               <div
                 key={index}
                 className="w-[100%] h-full sm:h-full md:h-full lg:h-[300px] xl:h-[300px] lg:w-[95%] box-border border-2 border-[#3a3a3a] block sm:block md:block lg:flex xl:flex flex-row justify-between items-center transition-transform duration-300 ease-in-out hover:scale-105"
+                data-aos="fade-up"
               >
                 <div className="relative h-[250px] lg:min-w-[300px] xl:min-w-[300px] sm:h-[450px] md:h-[600px] lg:h-full xl:h-full">
                   <Image

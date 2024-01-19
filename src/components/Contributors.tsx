@@ -44,11 +44,14 @@ export const Contributors: React.FC<ContributorsProps> = ({ id }) => {
             <main id={id}>
                 <Container className="container flex flex-col xl:px-0">
                     <div
-                        className="mt-20 mb-10"
+                        className="mt-20"
                         data-aos="fade-up"
                     >
-                        <p className="font-montserrat font-semibold text-base sm:text-2xl md:text-2xl lg:text-2xl xl:text-3xl">
-                            <span className="bg-[#960202] p-2 rounded-xl">Contributors</span>
+                        <p className="font-montserrat font-semibold text-base sm:text-2xl md:text-2xl lg:text-4xl xl:text-5xl">
+                            <span className="bg-[#960202] p-2 rounded-xl">contributors</span>
+                        </p>
+                        <p className="font-montserrat font-regular text-base sm:text-2xl md:text-2xl lg:text-2xl xl:text-2xl my-6">
+                            Innovating and designing the website through passion
                         </p>
                     </div>
                     <div className="flex flex-row md:block lg:flex-row justify-between items-center my-10">
@@ -60,7 +63,7 @@ export const Contributors: React.FC<ContributorsProps> = ({ id }) => {
                             {contributors.map((contributor, index) => (
                                 <div
                                     key={index}
-                                    className="w-[100%] h-full sm:h-full md:h-full lg:h-[300px] xl:h-[525px] lg:w-[25%] box-border border-2 border-[#3a3a3a] block sm:block md:block lg:flex xl:flex flex-col justify-between items-center transition-transform duration-300 ease-in-out "
+                                    className="w-[100%] h-full sm:h-full md:h-full lg:h-[300px] xl:h-[525px] lg:w-[25%] box-border border-2 border-[#3a3a3a] block sm:block md:block lg:flex xl:flex flex-col justify-between items-center transition-transform duration-300 ease-in-out"
                                 >
                                     <div className="relative h-[20px] lg:min-w-[300px] xl:min-w-[300px] sm:h-[450px] md:h-[600px] lg:h-full xl:h-full">
                                         <Image
