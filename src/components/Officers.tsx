@@ -127,7 +127,7 @@ export const Officers = () => {
             </h1>
             <p className="font-montserrat font-regular text-2xl my-10">
               Information Technology Society Student Organization Current
-              Officers
+              Officers (A.Y. 2023-2024)
             </p>
 
             <div className="flex flex-col md:block lg:flex-row xl:flex-row justify-between items-center my-10">
