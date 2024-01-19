@@ -49,6 +49,11 @@ const officers = [
     image: auditor,
   },
   {
+    name: "Mekaylle Kean Daquiz",
+    position: "Assistant Auditor",
+    image: asstauditor,
+  },
+  {
     name: "Rod Riven Ladroma",
     position: "Business Manager",
     image: businessmgr,
@@ -99,7 +104,8 @@ import asstsecretary from "~/assets/images/officers/asst_secretary.png";
 import treasurer from "~/assets/images/officers/treasurer.jpg";
 import assttreasurer from "~/assets/images/officers/asst_treasurer.jpeg";
 import auditor from "~/assets/images/officers/auditor.jpeg";
-import businessmgr from "~/assets/images/officers/business_manager.png";
+import asstauditor from "~/assets/images/officers/user.png";
+import businessmgr from "~/assets/images/officers/user.png";
 import asstbusinessmgr from "~/assets/images/officers/asst_business_manager.jpg";
 import pio from "~/assets/images/officers/pio.jpg";
 import rep1 from "~/assets/images/officers/rep1.jpg";
