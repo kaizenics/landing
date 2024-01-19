@@ -8,6 +8,7 @@ import { Container } from "~/components/ui/Container";
 import { MdExpandMore } from "react-icons/md";
 
 import "./index.css"
+import { Contributors } from '../components/Contributors';
 
 export default function Home() {
   return (
@@ -41,12 +42,14 @@ export default function Home() {
           </Container>
         </section>
 
-        
+
         <About id="about" />
-        <Separator/>
+        <Separator />
         <Officers />
-        <Separator/>
+        <Separator />
         <Publications id="publications" />
+        <Separator />
+        <Contributors id="contributors" />
 
       </main>
     </>

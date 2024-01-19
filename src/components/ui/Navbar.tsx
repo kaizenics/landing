@@ -5,6 +5,8 @@ import { Button } from "~/components/ui/Button";
 import { Container } from "~/components/ui/Container";
 import { Link } from "react-scroll/modules";
 import { HiOutlineMenuAlt3 } from "react-icons/hi";
+import Image from "next/image";
+import itslogo from "~/assets/images/New-ITS-Footer.png";
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -16,9 +18,11 @@ export const Navbar = () => {
   return (
     <Container className="md:flex flex-row justify-between container md:items-center py-12">
       <div className="flex justify-between items-center">
-      
-        <h4 className="font-montserrat md:text-xl lg:text-2xl mb-0 lg:mb-0">HCDC-ITS</h4>
-
+        <Image
+          className="h-10 w-fit sm:h-20 sm:w-fit"
+          src={itslogo}
+          alt="HCDC-ITS Logo"
+        />
         <div className="md:hidden">
           <button
             className="text-gray-500 hover:text-gray-700 focus:outline-none sm:py-[4px]"
@@ -60,7 +64,7 @@ export const Navbar = () => {
           </li>
           <li>
             <Link
-              to="#contributors"
+              to="contributors"
               smooth={true}
               duration={500}
               spy={true}
@@ -94,7 +98,7 @@ export const Navbar = () => {
               offset={-70}
               className="transition-opacity duration-300 ease-in-out hover:opacity-70 cursor-pointer"
             >
-              about
+              About
             </Link>
           </li>
           <li>
@@ -106,7 +110,7 @@ export const Navbar = () => {
               offset={-70}
               className="transition-opacity duration-300 ease-in-out hover:opacity-70 cursor-pointer"
             >
-              featured
+              Featured
             </Link>
           </li>
           <li>
@@ -118,7 +122,7 @@ export const Navbar = () => {
               offset={-70}
               className="transition-opacity duration-300 ease-in-out hover:opacity-70 cursor-pointer"
             >
-              contributors
+              Contributors
             </Link>
           </li>
           <li>
