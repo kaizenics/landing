@@ -4,7 +4,8 @@ import { Container } from "~/components/ui/Container";
 import Image from "next/image";
 
 import itslogo from "~/assets/images/New-ITS-Logo.png"
-export default function Officers() {
+
+export const Officers = () => {
   return (
     <>
       <main>

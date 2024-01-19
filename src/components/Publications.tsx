@@ -101,7 +101,7 @@ export const Publications: React.FC<PublicationsProps> = ({ id }) => {
 
   return (
     <section id={id}>
-      <Container className="container flex flex-col px-6 xl:px-0">
+      <Container className="container flex flex-col xl:px-0">
         <div
           className="mt-20 mb-10"
           data-aos="fade-up"
@@ -134,7 +134,7 @@ export const Publications: React.FC<PublicationsProps> = ({ id }) => {
                   <h2 className="font-montserrat text-base sm:text-base md:text-lg lg:text-lg font-bold mb-3">
                     {update.title}
                   </h2>
-                  <p className="font-montserrat text-justify text-gray-500 text-sm sm:text-sm md:text-sm lg:text-sm hidden">
+                  <p className="font-montserrat text-justify text-gray-500 text-sm sm:text-sm md:text-sm lg:text-sm hidden lg:block xl:block">
                     {update.description.length > 255
                       ? `${update.description.substring(0, 255)}...`
                       : update.description}
@@ -155,7 +155,7 @@ export const Publications: React.FC<PublicationsProps> = ({ id }) => {
           </div>
         </div>
 
-        <div className="flex justify-center my-4">
+        <div className="flex justify-center my-4 mb-24">
           {Array.from({ length: totalPages }, (_, index) => (
             <button
               key={index}
