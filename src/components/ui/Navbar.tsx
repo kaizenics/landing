@@ -5,8 +5,6 @@ import { Button } from "~/components/ui/Button";
 import { Container } from "~/components/ui/Container";
 import { Link } from "react-scroll/modules";
 import { HiOutlineMenuAlt3 } from "react-icons/hi";
-import Image from "next/image";
-import itslogo from "~/assets/images/ITS-Header.png";
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
