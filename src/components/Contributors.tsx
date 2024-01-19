@@ -3,9 +3,7 @@
 import { Container } from "~/components/ui/Container";
 import Image from "next/image";
 
-import itslogo from "~/assets/images/New-ITS-Logo.png"
-
-import niko from "~/assets/images/contributors/niko_soriano.jpeg"
+import niko from "~/assets/images/contributors/niko_soriano.jpg"
 import jeo from "~/assets/images/contributors/jeo.jpeg"
 
 const contributors = [
@@ -50,7 +48,7 @@ export const Contributors: React.FC<ContributorsProps> = ({ id }) => {
                         data-aos="fade-up"
                     >
                         <p className="font-montserrat font-semibold text-base sm:text-2xl md:text-2xl lg:text-2xl xl:text-3xl">
-                            <span className="bg-[#960202] p-2">Contributors</span>
+                            <span className="bg-[#960202] p-2 rounded-xl">Contributors</span>
                         </p>
                     </div>
                     <div className="flex flex-row md:block lg:flex-row justify-between items-center my-10">

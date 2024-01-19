@@ -65,7 +65,7 @@ export const Footer = () => {
       <section>
         <Container className="container flex px-6 xl:px-0">
           <div className="font-montserrat text-md items-start text-[#dfdfdfdc] inline-block mb-20 whitespace-nowrap">
-            <p>HCDC ITS / Niko Soriano © 2024 All Rights Reserved</p>
+            <p>HCDC ITS © 2024 All Rights Reserved</p>
           </div>
         </Container>
       </section>
