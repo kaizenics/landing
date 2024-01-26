@@ -65,6 +65,18 @@ export const Navbar = () => {
               offset={-70}
               className="transition-opacity duration-300 ease-in-out hover:opacity-70 cursor-pointer"
             >
+              officers
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="contributors"
+              smooth={true}
+              duration={500}
+              spy={true}
+              offset={-70}
+              className="transition-opacity duration-300 ease-in-out hover:opacity-70 cursor-pointer"
+            >
               contributors
             </Link>
           </li>
