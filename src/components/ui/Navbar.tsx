@@ -16,7 +16,7 @@ export const Navbar = () => {
   return (
     <Container className="md:flex flex-row justify-between container md:items-center py-12">
       <div className="flex justify-between items-center">
-      <h4 className="font-montserrat my-5 sm:my-5 md:my-5 lg:my-0 xl:my-0 font-semibold text-xl sm:text-xl md:text-2xl lg:text-3xl xl:text-3xl mb-4 lg:mb-0">HCDC-ITS</h4>
+        <h4 className="font-montserrat my-5 sm:my-5 md:my-5 lg:my-0 xl:my-0 font-semibold text-xl sm:text-xl md:text-2xl lg:text-3xl xl:text-3xl mb-4 lg:mb-0">HCDC-ITS</h4>
         <div className="md:hidden">
           <button
             className="text-gray-500 hover:text-gray-700 focus:outline-none sm:py-[4px]"
@@ -58,7 +58,7 @@ export const Navbar = () => {
           </li>
           <li>
             <Link
-              to="contributors"
+              to="officers"
               smooth={true}
               duration={500}
               spy={true}

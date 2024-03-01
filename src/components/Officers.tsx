@@ -114,12 +114,16 @@ import rep3 from "~/assets/images/officers/rep3.jpg";
 import rep4 from "~/assets/images/officers/rep4.jpg";
 import graphics from "~/assets/images/contributors/niko_soriano.jpg";
 
-export const Officers = () => {
+interface OfficersProps {
+  id: string;
+}
+
+export const Officers: React.FC<OfficersProps> = ({ id }) => {
   return (
     <>
-      <main>
+      <main id={id}>
         <Container className="container flex px-6 xl:px-0">
-          <div className="container justify-start my-20"  data-aos="fade-up">
+          <div className="container justify-start my-20" data-aos="fade-up">
             <h1 className="font-montserrat font-semibold text-[18px] sm:text-[30px] md:text-[45px] lg:text-[60px] xl:text-5xl">
               <span className="bg-[#960202] p-2 sm:px-4 md:px-5 lg:px-5 xl:px-5 rounded-xl">
                 meet the team
