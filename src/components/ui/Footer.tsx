@@ -32,7 +32,10 @@ export const Footer = () => {
                     <p className="mb-3 hover:underline hover:text-white">Facebook</p>
                   </a>
                   <p className="mb-3">Instagram</p>
-                  <p className="mb-3">GitHub</p>
+                  <a href="https://github.com/hcdc-its" target="_blank" rel="noopener noreferrer">
+                    <p className="mb-3">GitHub</p>
+                  </a>
+
                 </div>
               </div>
               <div className="mx-[10px] my-[8%] align-left space-y-4">
