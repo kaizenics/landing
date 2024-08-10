@@ -1,12 +1,12 @@
 
 
-import { About } from "~/components/About";
-import { Officers } from "~/components/Officers";
-import { Separator } from "~/components/ui/Separator";
-import { Publications } from "~/components/Publications";
-import { MainHome } from "~/components/MainHome";
-import { Contributors } from '../components/Contributors';
-import { Organizations } from "~/components/Organizations";
+import { About } from "~/components/about";
+import { Separator } from "~/components/ui/separator";
+import { Publications } from "~/components/publications";
+import { Hero } from "~/components/hero";
+import { Partners } from "~/components/partners";
+import { Contributors } from '../components/contributors';
+import { Organizations } from "~/components/organizations";
 
 import "./index.css"
 
@@ -15,14 +15,11 @@ export default function Home() {
   return (
     <>
       <main>
-        <MainHome />
+        <Hero />
+        <Partners />
         <About id="about" />
         <Separator />
-        <Officers id="officers" />
-        <Separator />
         <Publications id="publications" />
-        <Separator />
-        <Contributors id="contributors" />
       </main>
     </>
   );
