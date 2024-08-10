@@ -1,6 +1,6 @@
 "use client";
 
-import { Container } from "~/components/ui/container";
+import { Container } from "~/components/ui/Container";
 import { useEffect } from 'react'
 import { IoArrowForward } from "react-icons/io5";
 import AOS from "aos";

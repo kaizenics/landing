@@ -1,8 +1,8 @@
 
 
-import { About } from "~/components/about";
-import { Separator } from "~/components/ui/separator";
-import { Publications } from "~/components/publications";
+import { About } from "~/components/About";
+import { Separator } from "~/components/ui/Separator";
+import { Publications } from "~/components/Publications";
 import { Hero } from "~/components/hero";
 import { Partners } from "~/components/partners";
 

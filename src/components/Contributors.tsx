@@ -1,6 +1,6 @@
 "use client";
 
-import { Container } from "~/components/ui/container";
+import { Container } from "~/components/ui/Container";
 import Image from "next/image";
 
 import niko from "~/assets/images/contributors/niko_soriano.jpg"

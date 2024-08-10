@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Container } from "~/components/ui/container";
+import { Container } from "~/components/ui/Container";
 
 import itslogo from "~/assets/images/New-ITS-Footer.png";
 

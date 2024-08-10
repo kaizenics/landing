@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { Container } from "~/components/ui/container";
+import { Container } from "~/components/ui/Container";
 import Image from "next/image";
 import AOS from "aos";
 import "aos/dist/aos.css";

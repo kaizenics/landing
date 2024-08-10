@@ -1,8 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { Button } from "~/components/ui/button";
-import { Container } from "~/components/ui/container";
+import { Button } from "~/components/ui/Button";
+import { Container } from "~/components/ui/Container";
 import { Link } from "react-scroll/modules";
 import { HiOutlineMenuAlt3 } from "react-icons/hi";
 import { ModeToggle } from "~/components/ui/toggle";
