@@ -11,15 +11,6 @@ export const metadata: Metadata = {
   title: 'HCDC Information Technology Society',
   description: 'HCDC Information Technology Society Official Publication Website',
 
-  // meta tags for social share links
-  openGraph: {
-    title: 'HCDC Information Technology Society',
-    type: 'website',
-    url: 'hcdc-its.vercel.app',
-    images: 'https://i.imgur.com/YvFWkKb.png',
-    description: 'HCDC Information Technology Society Official Publication Website',
-  },
-
 
 }
 
