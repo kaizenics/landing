@@ -1,10 +1,11 @@
 "use client";
 
 import { useState } from "react";
-import { Button } from "~/components/ui/Button";
-import { Container } from "~/components/ui/Container";
+import { Button } from "~/components/ui/button";
+import { Container } from "~/components/ui/container";
 import { Link } from "react-scroll/modules";
 import { HiOutlineMenuAlt3 } from "react-icons/hi";
+import { ModeToggle } from "~/components/ui/toggle";
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -14,12 +15,15 @@ export const Navbar = () => {
   };
 
   return (
-    <Container className="md:flex flex-row justify-between container md:items-center py-12">
+    <div className="sticky top-0 z-50 bg-white/00 backdrop-blur-lg py-6 px-6">
+      <Container className="md:flex flex-row justify-between md:items-center">
       <div className="flex justify-between items-center">
-        <h4 className="font-montserrat my-5 sm:my-5 md:my-5 lg:my-0 xl:my-0 font-semibold text-xl sm:text-xl md:text-2xl lg:text-3xl xl:text-3xl mb-4 lg:mb-0">HCDC-ITS</h4>
+        <h4 className="font-montserrat font-semibold text-2xl sm:text-xl md:text-2xl lg:text-3xl xl:text-3xl">
+          HCDC ITS
+        </h4>
         <div className="md:hidden">
           <button
-            className="text-gray-500 hover:text-gray-700 focus:outline-none sm:py-[4px]"
+            className="text-gray-500 hover:text-gray-700 focus:outline-none"
             onClick={toggleMenu}
           >
             <HiOutlineMenuAlt3 className="w-7 h-7" />
@@ -29,7 +33,7 @@ export const Navbar = () => {
 
       <div className="flex md:flex-row md:items-center lg:space-y-0 space-x-12 md:space-x-8 xl:space-x-16">
         <ul
-          className={`font-montserrat lg:text-lg md:text-[15px] md:flex lg:space-x-12 md:space-x-6 ${isOpen ? "hidden" : "hidden md:block"
+          className={`font-montserrat lg:text-lg md:text-[15px] md:flex lg:space-x-12 md:space-x-6 ${isOpen ? "hidden" : "hidden sm:block"
             }`}
         >
           <li>
@@ -65,7 +69,7 @@ export const Navbar = () => {
               offset={-70}
               className="transition-opacity duration-300 ease-in-out hover:opacity-70 cursor-pointer"
             >
-              officers
+              team
             </Link>
           </li>
           <li>
@@ -77,22 +81,25 @@ export const Navbar = () => {
               offset={-70}
               className="transition-opacity duration-300 ease-in-out hover:opacity-70 cursor-pointer"
             >
-              contributors
+              developers
             </Link>
           </li>
         </ul>
 
         <Button
-          className={`font-monserrat text-sm md:text-base md:transition-opacity duration-300 ease-in-out hover:opacity-70 hidden md:block`}
+          className={`bg-white font-montserrat font-semibold text-sm md:text-base transition-opacity duration-300 ease-in-out hover:opacity-70 hidden md:block`}
         >
           Browse Merch
         </Button>
+        <div className="justify-center items-center hidden md:block">
+          <ModeToggle />
+        </div>
       </div>
 
       {/* BEGIN: Mobile Menu */}
       <div
         className={`lg:hidden ${isOpen ? "block" : "hidden"
-          } flex flex-col items-end py-5 px-2 text-right space-y-4`}
+          } flex flex-col items-end py-4 px-2 text-right space-y-4`}
       >
         <ul className="font-montserrat flex flex-col space-y-4">
           <li>
@@ -145,8 +152,8 @@ export const Navbar = () => {
           </li>
         </ul>
       </div>
-
       {/* END: Mobile Menu */}
-    </Container>
+      </Container>
+    </div>
   );
 };

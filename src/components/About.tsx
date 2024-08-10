@@ -1,7 +1,7 @@
 "use client";
 
-import { Container } from "~/components/ui/Container";
-import { Separator } from "~/components/ui/Separator";
+import { Container } from "~/components/ui/container";
+import { Separator } from "~/components/ui/separator";
 import { useEffect } from 'react'
 import { IoArrowForward } from "react-icons/io5";
 import AOS from "aos";
@@ -20,8 +20,7 @@ export const About: React.FC<AboutProps> = ({ id }) => {
 
   return (
    
-    <section id={id} className="mt-[35%] mb-24"  data-aos="fade-up">
-      <Separator/>
+    <section id={id} className="mt-14 mb-24"  data-aos="fade-up">
       <Container className="container flex flex-col">
       <div className="grid lg:grid-cols-2 gap-0 py-14 mx-auto mt-10"
       data-aos="fade-up"
