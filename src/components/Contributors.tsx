@@ -124,3 +124,6 @@ export const Contributors: React.FC<ContributorsProps> = ({ id }) => {
         </>
     );
 }
+
+
+ // contributors.tsx

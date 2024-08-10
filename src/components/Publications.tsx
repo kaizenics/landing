@@ -109,3 +109,6 @@ export const Publications: React.FC<PublicationsProps> = ({ id }) => {
     </section>
   );
 };
+
+
+// publications.tsx
