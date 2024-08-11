@@ -64,8 +64,10 @@ export function FAQ() {
               </AccordionTrigger>
               <AccordionContent>
                 it was maintained by Niko Soriano, a Creatives Head and Project
-                Lead of the HCDC Information Technology Society. Jeo Carlo Lubao
-                is also the Open-source Contributor of the website.
+                Lead of the HCDC Information Technology Society. Jeo Carlo
+                Lubao, an Alumni and Former President is also the Open Source
+                Contributor of the website. Ace Dela Cruz, a Former Representative of the club and is also developed an
+                Attendance Monitoring System for the Organization.
               </AccordionContent>
             </AccordionItem>
           </Accordion>
