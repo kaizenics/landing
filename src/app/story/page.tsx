@@ -56,9 +56,9 @@ export default function Story() {
             group dedicated to bringing innovative ideas to life through design
             and media. They play a key role in crafting visually engaging
             content, including promotional materials, social media graphics, and
-            event branding, that enhances the society's presence and impact.
+            event branding, that enhances the society&rsquo;s presence and impact.
             With a keen eye for detail and creativity, the Creatives ensure that
-            all communications and materials effectively convey the society’s
+            all communications and materials effectively convey the society&rsquo;s
             mission and activities, contributing to a dynamic and professional
             image for the Holy Cross of Davao College IT community.
           </p>
