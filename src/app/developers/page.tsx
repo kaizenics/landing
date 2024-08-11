@@ -1,9 +1,12 @@
-import React from 'react'
+import React from "react";
+import { Container } from "~/components/ui/Container";
 
 export default function Developers() {
   return (
-    <div>
-      <h1>Team Page</h1>
-    </div>
-  )
+    <Container>
+      <div>
+        <h1>Team Page</h1>
+      </div>
+    </Container>
+  );
 }
