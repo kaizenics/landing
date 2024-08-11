@@ -5,11 +5,15 @@ import { useEffect } from 'react'
 import { IoArrowForward } from "react-icons/io5";
 import AOS from "aos";
 import 'aos/dist/aos.css';
+import { useRouter } from "next/navigation";
+
 interface AboutProps {
   id: string;
 }
 
 export const About: React.FC<AboutProps> = ({ id }) => {
+  const router = useRouter();
+
   useEffect (() => {
     AOS.init({
       duration: 1000,
@@ -38,7 +42,7 @@ export const About: React.FC<AboutProps> = ({ id }) => {
               College.
             </p>
             <div className="flex items-center underline">
-              <button className="font-montserrat sm:text-[20px] md:text-[25px] lg:text-3xl transition-opacity duration-300 ease-in-out hover:opacity-70 mt-14">
+              <button className="font-montserrat sm:text-[20px] md:text-[25px] lg:text-3xl transition-opacity duration-300 ease-in-out hover:opacity-70 mt-14" onClick={() => router.push("/story")}>
                 Our Story
               </button>
               <IoArrowForward className="w-8 h-8 ml-2 mt-14" />

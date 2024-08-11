@@ -46,10 +46,10 @@ export const Publications: React.FC<PublicationsProps> = ({ id }) => {
           </div>
 
           <div
-            className="flex flex-row md:block lg:flex-row justify-between items-center my-10"
+            className="flex flex-row md:block lg:flex-row justify-center items-center my-10"
             data-aos="fade-up"
           >
-            <div className=" h-[950px] lg:mx-5 xl:mx-5 grid grid-cols-1 gap-6 sm:gap-2">
+            <div className="md:h-[950px] lg:mx-5 xl:mx-5 grid grid-cols-1 gap-6 sm:gap-2">
               {currentUpdates.map((update, index) => (
                 <div
                   key={index}
