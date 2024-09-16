@@ -99,11 +99,7 @@ const config: Config = {
         marquee: 'marquee var(--duration, 60s) linear infinite'
       },
       fontFamily: {
-        montserrat: ['Montserrat', 'sans-serif'],
-        'montserrat-thin': ['Montserrat', 'sans-serif', '100'],
-        'montserrat-regular': ['Montserrat', 'sans-serif', '400'],
-        'montserrat-bold': ['Montserrat', 'sans-serif', '700'],
-        'montserrat-semibold': ['Montserrat', 'sans-serif', '600'],
+        montserrat: ["var(--font-montserrat)", "sans-serif"],
       },
     },
   },
