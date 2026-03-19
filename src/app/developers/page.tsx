@@ -5,7 +5,6 @@ import { HiArrowLeft, HiCube, HiTemplate, HiLightningBolt, HiCode, HiCollection,
 import Image from "next/image";
 import Link from "next/link";
 import jeo from "~/assets/images/contributors/jeo.jpeg";
-import niko_default from "~/assets/images/contributors/niko soriano.png";
 import niko_hover from "~/assets/images/contributors/niko_soriano.jpg";
 import cath_default from "~/assets/images/contributors/cath.png";
 import cath_hover from "~/assets/images/contributors/CATHERINE ARNADO.png";
@@ -22,8 +21,8 @@ const developers = [
   {
     name: "Nicose John Soriano",
     role: "ITS Creatives Head (2023-2025)",
-    description: "Lead Developer & Designer",
-    image: niko_default,
+    description: "Lead Developer",
+    image: niko_hover,
     hoverImage: niko_hover,
     tags: ["Founder", "Lead Frontend", "Visual Identity"],
   },
