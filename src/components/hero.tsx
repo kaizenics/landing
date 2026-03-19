@@ -15,7 +15,7 @@ export const Hero = () => {
           <Container variant={"fullMobileBreakpointPadded"}>
 
             <div className="h-screen flex items-center">
-              <div className="w-full lg:w-1/2 h-full flex flex-col items-start justify-center relative z-[1] animate-moveUp">
+              <div className="w-full lg:w-1/2 h-full flex flex-col items-start justify-center relative z-1 animate-moveUp">
                 <div className="relative w-full">
                   <div className="absolute left-0 -top-16 sm:-top-28">
                     <Image src={logo} alt="" width={70} height={70} className="sm:w-[90px] sm:h-[90px]" />
@@ -37,8 +37,8 @@ export const Hero = () => {
               </div>
             </div>
           </Container>
-          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-transparent to-its-red opacity-20" />
-          <div className="absolute top-0 -right-[120vw] sm:-right-[70vw] md:-right-[50vw] lg:right-0  h-full -z-0 animate-appear opacity-0">
+          <div className="absolute top-0 left-0 w-full h-full bg-linear-to-r from-transparent to-its-red opacity-20" />
+          <div className="absolute top-0 -right-[120vw] sm:-right-[70vw] md:-right-[50vw] lg:right-0  h-full z-0 animate-appear opacity-0">
             <Image src={hero} alt="" className="h-full w-auto opacity-15" />
           </div>
         </div>

@@ -16,7 +16,7 @@ export const Developers = () => {
         <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
-            className="fixed bottom-6 right-6 sm:bottom-8 sm:right-8 z-[150] group"
+            className="fixed bottom-6 right-6 sm:bottom-8 sm:right-8 z-150 group"
         >
             <Link href="/developers" className="relative block">
                 <div className="absolute inset-0 bg-its-red blur-xl opacity-20 group-hover:opacity-40 transition-opacity rounded-full" />

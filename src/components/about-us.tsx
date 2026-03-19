@@ -82,7 +82,7 @@ export const About = () => {
             variants={fadeInUp}
           >
             <motion.div
-              className="bg-neutral-900/50 backdrop-blur-sm p-8 rounded-xl border border-neutral-800"
+              className="bg-neutral-900/50 backdrop-blur-xs p-8 rounded-xl border border-neutral-800"
               whileHover={{ scale: 1.02 }}
               transition={{ type: "spring", stiffness: 300 }}
             >
@@ -100,7 +100,7 @@ export const About = () => {
             </motion.div>
 
             <motion.div
-              className="bg-neutral-900/50 backdrop-blur-sm p-8 rounded-xl border border-neutral-800"
+              className="bg-neutral-900/50 backdrop-blur-xs p-8 rounded-xl border border-neutral-800"
               whileHover={{ scale: 1.02 }}
               transition={{ type: "spring", stiffness: 300 }}
             >
@@ -137,7 +137,7 @@ export const About = () => {
             {cards.map((card, index) => (
               <motion.div
                 key={index}
-                className="bg-neutral-900/50 backdrop-blur-sm p-6 rounded-xl border border-neutral-800 hover:border-its-red/50 transition-colors"
+                className="bg-neutral-900/50 backdrop-blur-xs p-6 rounded-xl border border-neutral-800 hover:border-its-red/50 transition-colors"
                 whileHover={{ y: -10 }}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}

@@ -144,7 +144,7 @@ export default function OfficersPage() {
                         transition={{ duration: 0.5 }}
                         className="mb-12"
                     >
-                        <h1 className="font-questrial text-5xl sm:text-7xl font-black text-transparent bg-clip-text bg-gradient-to-r from-its-red via-white to-its-red mb-4">
+                        <h1 className="font-questrial text-5xl sm:text-7xl font-black text-transparent bg-clip-text bg-linear-to-r from-its-red via-white to-its-red mb-4">
                             Officers
                         </h1>
                         <p className="font-inter text-neutral-400 text-lg">
@@ -230,14 +230,14 @@ export default function OfficersPage() {
                             >
                                 <div className="sticky top-28 space-y-6">
                                     {president && (
-                                        <div className="relative bg-gradient-to-br from-its-red/30 to-black border border-its-red/30 rounded-3xl p-6 sm:p-8 overflow-hidden">
-                                            <div className="absolute inset-0 bg-gradient-to-br from-its-red/10 to-transparent" />
+                                        <div className="relative bg-linear-to-br from-its-red/30 to-black border border-its-red/30 rounded-3xl p-6 sm:p-8 overflow-hidden">
+                                            <div className="absolute inset-0 bg-linear-to-br from-its-red/10 to-transparent" />
                                             <div className="relative z-10">
-                                                <div className="w-full aspect-[3/4] rounded-2xl overflow-hidden relative mb-6 border-2 border-its-red/20 shadow-2xl shadow-its-red/20">
+                                                <div className="w-full aspect-3/4 rounded-2xl overflow-hidden relative mb-6 border-2 border-its-red/20 shadow-2xl shadow-its-red/20">
                                                     {president.image ? (
                                                         <Image src={president.image} alt={president.name} fill className="object-cover" />
                                                     ) : (
-                                                        <div className="w-full h-full bg-gradient-to-br from-its-red to-its-red flex items-center justify-center">
+                                                        <div className="w-full h-full bg-linear-to-br from-its-red to-its-red flex items-center justify-center">
                                                             <span className="font-questrial text-6xl font-bold text-white">
                                                                 {president.name.charAt(0)}
                                                             </span>
@@ -258,8 +258,8 @@ export default function OfficersPage() {
                                     )}
 
                                     {selectedYear === "2025-2026" && (
-                                        <div className="relative group bg-gradient-to-br from-white/5 to-black border border-white/10 rounded-3xl p-6 overflow-hidden transition-all hover:border-its-red/30">
-                                            <div className="absolute inset-0 bg-gradient-to-br from-its-red/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                                        <div className="relative group bg-linear-to-br from-white/5 to-black border border-white/10 rounded-3xl p-6 overflow-hidden transition-all hover:border-its-red/30">
+                                            <div className="absolute inset-0 bg-linear-to-br from-its-red/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                                             <div className="relative z-10">
                                                 <div className="flex items-center gap-3 mb-6">
                                                     <div className="w-1 h-6 bg-its-red rounded-full" />
@@ -267,7 +267,7 @@ export default function OfficersPage() {
                                                         Official Uniform
                                                     </h4>
                                                 </div>
-                                                <div className="relative w-full aspect-square bg-white/[0.02] rounded-2xl overflow-hidden mb-6 border border-white/5 flex items-center justify-center p-4">
+                                                <div className="relative w-full aspect-square bg-white/2 rounded-2xl overflow-hidden mb-6 border border-white/5 flex items-center justify-center p-4">
                                                     <Image
                                                         src="/shirts/officershirt/its officer polo shirt .png"
                                                         alt="ITS Officer Polo Shirt"
@@ -307,18 +307,18 @@ export default function OfficersPage() {
                                             exit={{ opacity: 0, y: -20 }}
                                             transition={{ duration: 0.3, delay: index * 0.05 }}
                                             className={`group relative border transition-all duration-300 rounded-2xl p-6 ${officer.isModerator
-                                                ? 'bg-gradient-to-br from-its-red/20 via-black to-black border-its-red/50 shadow-[0_0_20px_rgba(150,0,0,0.2)] hover:border-its-red hover:shadow-[0_0_30px_rgba(150,0,0,0.4)]'
-                                                : 'bg-gradient-to-br from-white/5 to-white/[0.02] border-white/10 hover:border-white/20'}`}
+                                                ? 'bg-linear-to-br from-its-red/20 via-black to-black border-its-red/50 shadow-[0_0_20px_rgba(150,0,0,0.2)] hover:border-its-red hover:shadow-[0_0_30px_rgba(150,0,0,0.4)]'
+                                                : 'bg-linear-to-br from-white/5 to-white/2 border-white/10 hover:border-white/20'}`}
                                         >
                                             {officer.isModerator && (
-                                                <div className="absolute inset-0 bg-gradient-to-tr from-its-red/10 via-transparent to-transparent opacity-60 rounded-2xl pointer-events-none" />
+                                                <div className="absolute inset-0 bg-linear-to-tr from-its-red/10 via-transparent to-transparent opacity-60 rounded-2xl pointer-events-none" />
                                             )}
                                             {/* ID Card Image Area */}
-                                            <div className={`w-full aspect-[3/4] mb-4 bg-gradient-to-br from-white/10 to-transparent rounded-xl overflow-hidden relative border transition-colors ${officer.isModerator ? 'border-its-red/30 group-hover:border-its-red/60' : 'border-white/10 group-hover:border-white/20'}`}>
+                                            <div className={`w-full aspect-3/4 mb-4 bg-linear-to-br from-white/10 to-transparent rounded-xl overflow-hidden relative border transition-colors ${officer.isModerator ? 'border-its-red/30 group-hover:border-its-red/60' : 'border-white/10 group-hover:border-white/20'}`}>
                                                 {officer.image ? (
                                                     <Image fill src={officer.image} alt={officer.name} className="object-cover transition-transform duration-500 group-hover:scale-105" />
                                                 ) : (
-                                                    <div className={`w-full h-full flex items-center justify-center bg-gradient-to-br ${teamColors[officer.team]}`}>
+                                                    <div className={`w-full h-full flex items-center justify-center bg-linear-to-br ${teamColors[officer.team]}`}>
                                                         <span className="font-questrial text-4xl font-bold text-white">
                                                             {officer.name.charAt(0)}
                                                         </span>
@@ -326,7 +326,7 @@ export default function OfficersPage() {
                                                 )}
 
                                                 {/* ID Gloss Effect */}
-                                                <div className="absolute inset-0 bg-gradient-to-tr from-white/5 to-transparent pointer-events-none" />
+                                                <div className="absolute inset-0 bg-linear-to-tr from-white/5 to-transparent pointer-events-none" />
                                             </div>
 
                                             {/* Info */}

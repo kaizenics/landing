@@ -63,7 +63,7 @@ export const Contributors: React.FC<ContributorsProps> = ({ id }) => {
                             {contributors.map((contributor, index) => (
                                 <div
                                     key={index}
-                                    className="w-[100%] h-full sm:h-full md:h-full lg:h-[300px] xl:h-[525px] lg:w-[25%] box-border border-2 border-[#3a3a3a] block sm:block md:block lg:flex xl:flex flex-col justify-between items-center transition-transform duration-300 ease-in-out"
+                                    className="w-full h-full sm:h-full md:h-full lg:h-[300px] xl:h-[525px] lg:w-[25%] box-border border-2 border-[#3a3a3a] block sm:block md:block lg:flex xl:flex flex-col justify-between items-center transition-transform duration-300 ease-in-out"
                                 >
                                     <div className="relative h-[20px] lg:min-w-[300px] xl:min-w-[300px] sm:h-[450px] md:h-[600px] lg:h-full xl:h-full">
                                         <Image
@@ -75,7 +75,7 @@ export const Contributors: React.FC<ContributorsProps> = ({ id }) => {
                                     <div className=" lg:p-6 sm:p-16 relative h-[200px] lg:min-w-[300px] xl:min-w-[300px] sm:h-[450px] md:h-[600px] lg:h-full xl:h-full">
 
                                         <div className="lg:h-[120px]">
-                                            <h4 className="font-montserrat text-lg font-bold mt-[100px] lg:mt-[0px] ">{contributor.full_name}</h4>
+                                            <h4 className="font-montserrat text-lg font-bold mt-[100px] lg:mt-0 ">{contributor.full_name}</h4>
 
                                             <h4 className="font-montserrat  text-sm text-[#afaeaedc] mt-2">{contributor.year}</h4>
                                             <h4 className="font-montserrat  text-xs text-[#afaeaedc] mt-6">{contributor.description}</h4>

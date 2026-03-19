@@ -74,7 +74,7 @@ const Section = ({ category, index }: { category: typeof categories[0], index: n
         <div className="absolute left-8 md:left-20 top-0 bottom-0 w-px bg-white/10 z-10">
           <motion.div
             style={{ scaleY: scrollYProgress }}
-            className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-its-red via-its-red to-transparent origin-top"
+            className="absolute top-0 left-0 w-full h-full bg-linear-to-b from-its-red via-its-red to-transparent origin-top"
           />
         </div>
 
@@ -101,7 +101,7 @@ const Section = ({ category, index }: { category: typeof categories[0], index: n
                     className={`transition-transform duration-700 group-hover:scale-110 ${category.id === 'merchs' ? 'object-contain pl-16 sm:pl-32 pr-4 sm:pr-8 py-8' : 'object-cover grayscale group-hover:grayscale-0'}`}
                   />
                   {category.id !== 'merchs' && (
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent opacity-80" />
+                    <div className="absolute inset-0 bg-linear-to-t from-black/90 via-transparent to-transparent opacity-80" />
                   )}
 
                   {category.id === 'merchs' ? (

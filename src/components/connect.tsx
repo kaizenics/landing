@@ -107,9 +107,9 @@ export const Connect = () => {
             className="relative"
           >
             {/* Decorative background element */}
-            <div className="absolute -inset-4 bg-gradient-to-br from-its-red/5 to-transparent blur-3xl opacity-50 pointer-events-none" />
+            <div className="absolute -inset-4 bg-linear-to-br from-its-red/5 to-transparent blur-3xl opacity-50 pointer-events-none" />
 
-            <div className="relative bg-neutral-900/40 backdrop-blur-xl border border-white/5 rounded-[2rem] p-8 sm:p-12 shadow-2xl">
+            <div className="relative bg-neutral-900/40 backdrop-blur-xl border border-white/5 rounded-4xl p-8 sm:p-12 shadow-2xl">
               <form onSubmit={handleSubmit} className="space-y-8">
                 <div className="grid sm:grid-cols-2 gap-8">
                   <div className="space-y-2">
@@ -123,7 +123,7 @@ export const Connect = () => {
                       value={formData.name}
                       onChange={handleChange}
                       required
-                      className="w-full px-6 py-4 rounded-2xl bg-black/40 border border-white/5 focus:border-its-red/50 focus:outline-none focus:ring-1 focus:ring-its-red/50 font-inter text-sm transition-all"
+                      className="w-full px-6 py-4 rounded-2xl bg-black/40 border border-white/5 focus:border-its-red/50 focus:outline-hidden focus:ring-1 focus:ring-its-red/50 font-inter text-sm transition-all"
                       placeholder="Juan Dela Cruz"
                     />
                   </div>
@@ -138,7 +138,7 @@ export const Connect = () => {
                       value={formData.email}
                       onChange={handleChange}
                       required
-                      className="w-full px-6 py-4 rounded-2xl bg-black/40 border border-white/5 focus:border-its-red/50 focus:outline-none focus:ring-1 focus:ring-its-red/50 font-inter text-sm transition-all"
+                      className="w-full px-6 py-4 rounded-2xl bg-black/40 border border-white/5 focus:border-its-red/50 focus:outline-hidden focus:ring-1 focus:ring-its-red/50 font-inter text-sm transition-all"
                       placeholder="juan@example.com"
                     />
                   </div>
@@ -155,7 +155,7 @@ export const Connect = () => {
                       name="company"
                       value={formData.company}
                       onChange={handleChange}
-                      className="w-full px-6 py-4 rounded-2xl bg-black/40 border border-white/5 focus:border-its-red/50 focus:outline-none focus:ring-1 focus:ring-its-red/50 font-inter text-sm transition-all"
+                      className="w-full px-6 py-4 rounded-2xl bg-black/40 border border-white/5 focus:border-its-red/50 focus:outline-hidden focus:ring-1 focus:ring-its-red/50 font-inter text-sm transition-all"
                       placeholder="Company Name"
                     />
                   </div>
@@ -169,7 +169,7 @@ export const Connect = () => {
                       name="phone"
                       value={formData.phone}
                       onChange={handleChange}
-                      className="w-full px-6 py-4 rounded-2xl bg-black/40 border border-white/5 focus:border-its-red/50 focus:outline-none focus:ring-1 focus:ring-its-red/50 font-inter text-sm transition-all"
+                      className="w-full px-6 py-4 rounded-2xl bg-black/40 border border-white/5 focus:border-its-red/50 focus:outline-hidden focus:ring-1 focus:ring-its-red/50 font-inter text-sm transition-all"
                       placeholder="+63 000 000 0000"
                     />
                   </div>
@@ -185,7 +185,7 @@ export const Connect = () => {
                     value={formData.message}
                     onChange={handleChange}
                     rows={4}
-                    className="w-full px-6 py-4 rounded-2xl bg-black/40 border border-white/5 focus:border-its-red/50 focus:outline-none focus:ring-1 focus:ring-its-red/50 font-inter text-sm transition-all resize-none"
+                    className="w-full px-6 py-4 rounded-2xl bg-black/40 border border-white/5 focus:border-its-red/50 focus:outline-hidden focus:ring-1 focus:ring-its-red/50 font-inter text-sm transition-all resize-none"
                     placeholder="Tell us what's on your mind..."
                   />
                 </div>

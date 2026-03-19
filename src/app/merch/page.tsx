@@ -82,7 +82,7 @@ const Hotspot = ({ point, active, onClick }: { point: typeof HOTSPOTS[0], active
             {mounted && createPortal(
                 <AnimatePresence>
                     {active && (
-                        <div className="fixed inset-0 z-[9999] pointer-events-none flex items-center justify-center px-4">
+                        <div className="fixed inset-0 z-9999 pointer-events-none flex items-center justify-center px-4">
                             <motion.div
                                 initial={{ opacity: 0, scale: 0.9, y: 15, rotateX: 20 }}
                                 animate={{ opacity: 1, scale: 1, y: 0, rotateX: 0 }}
@@ -100,7 +100,7 @@ const Hotspot = ({ point, active, onClick }: { point: typeof HOTSPOTS[0], active
                                 <div className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{ backgroundImage: `repeating-linear-gradient(0deg, transparent, transparent 1px, #fff 1px, #fff 2px)`, backgroundSize: '100% 4px' }} />
 
                                 {/* Detail Window Content */}
-                                <div className="px-5 py-3.5 border-b border-white/5 bg-gradient-to-r from-its-red/20 to-transparent flex justify-start items-center relative overflow-hidden">
+                                <div className="px-5 py-3.5 border-b border-white/5 bg-linear-to-r from-its-red/20 to-transparent flex justify-start items-center relative overflow-hidden">
                                     <div className="flex items-center gap-3">
                                         <div className="flex items-center gap-1.5">
                                             <div className="w-1 h-1 rounded-full bg-its-red animate-pulse" />
@@ -112,7 +112,7 @@ const Hotspot = ({ point, active, onClick }: { point: typeof HOTSPOTS[0], active
                                     <motion.div
                                         animate={{ x: ['-100%', '100%'] }}
                                         transition={{ repeat: Infinity, duration: 2, ease: "linear" }}
-                                        className="absolute bottom-0 left-0 w-1/3 h-[1px] bg-gradient-to-r from-transparent via-its-red to-transparent opacity-50"
+                                        className="absolute bottom-0 left-0 w-1/3 h-px bg-linear-to-r from-transparent via-its-red to-transparent opacity-50"
                                     />
                                 </div>
 
@@ -121,12 +121,12 @@ const Hotspot = ({ point, active, onClick }: { point: typeof HOTSPOTS[0], active
                                     <div className="absolute top-2 left-2 w-4 h-4 border-t border-l border-its-red/30" />
                                     <div className="absolute bottom-2 right-2 w-4 h-4 border-b border-r border-its-red/30" />
 
-                                    <h4 className="font-inter-tight text-2xl font-black uppercase mb-5 tracking-tighter italic text-transparent bg-clip-text bg-gradient-to-r from-white via-white to-white/50 leading-none">
+                                    <h4 className="font-inter-tight text-2xl font-black uppercase mb-5 tracking-tighter italic text-transparent bg-clip-text bg-linear-to-r from-white via-white to-white/50 leading-none">
                                         {point.title}
                                     </h4>
 
                                     <div className="flex gap-5">
-                                        <div className="w-1.5 h-auto bg-gradient-to-b from-its-red via-its-red/50 to-transparent rounded-full shrink-0 shadow-[0_0_10px_rgba(150,0,0,0.5)]" />
+                                        <div className="w-1.5 h-auto bg-linear-to-b from-its-red via-its-red/50 to-transparent rounded-full shrink-0 shadow-[0_0_10px_rgba(150,0,0,0.5)]" />
                                         <p className="font-questrial text-[13px] text-neutral-400 leading-relaxed font-medium">
                                             {point.description}
                                         </p>
@@ -134,7 +134,7 @@ const Hotspot = ({ point, active, onClick }: { point: typeof HOTSPOTS[0], active
 
                                     <div className="grid grid-cols-2 gap-4 mt-8">
                                         <div className="p-4 bg-white/5 border border-white/5 rounded-2xl relative group overflow-hidden">
-                                            <div className="absolute inset-0 bg-gradient-to-br from-its-red/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                                            <div className="absolute inset-0 bg-linear-to-br from-its-red/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                                             <p className="text-[9px] font-black text-neutral-500 uppercase tracking-[0.2em] mb-1.5">Status</p>
                                             <div className="flex items-center gap-2">
                                                 <div className="w-1.5 h-1.5 rounded-full bg-green-500 shadow-[0_0_8px_rgba(34,197,94,0.5)]" />
@@ -142,7 +142,7 @@ const Hotspot = ({ point, active, onClick }: { point: typeof HOTSPOTS[0], active
                                             </div>
                                         </div>
                                         <div className="p-4 bg-white/5 border border-white/5 rounded-2xl relative group overflow-hidden">
-                                            <div className="absolute inset-0 bg-gradient-to-br from-its-red/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                                            <div className="absolute inset-0 bg-linear-to-br from-its-red/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                                             <p className="text-[9px] font-black text-neutral-500 uppercase tracking-[0.2em] mb-1.5">Type</p>
                                             <p className="text-[11px] font-black text-white tracking-wide uppercase">{point.label.replace('_', ' ')}</p>
                                         </div>
@@ -150,7 +150,7 @@ const Hotspot = ({ point, active, onClick }: { point: typeof HOTSPOTS[0], active
                                 </div>
 
                                 {/* Footer Status Indicators */}
-                                <div className="px-7 pb-6 flex justify-start items-center bg-gradient-to-t from-white/5 to-transparent pt-4">
+                                <div className="px-7 pb-6 flex justify-start items-center bg-linear-to-t from-white/5 to-transparent pt-4">
                                     <div className="flex gap-1">
                                         {[...Array(5)].map((_, i) => (
                                             <div key={i} className={`h-1.5 w-4 rounded-sm ${i < 3 ? 'bg-its-red/60' : 'bg-white/5'}`} />
@@ -276,7 +276,7 @@ export default function MerchPage() {
                         initial={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
                         transition={{ duration: 0.8, ease: "easeInOut" }}
-                        className="fixed inset-0 z-[200] bg-black flex items-center justify-center"
+                        className="fixed inset-0 z-200 bg-black flex items-center justify-center"
                     >
                         <motion.div
                             initial={{ opacity: 0, scale: 0.8 }}
@@ -327,7 +327,7 @@ export default function MerchPage() {
                             </AnimatePresence>
 
                             {/* Viewport Toggle Overlay for Main Product - SIMPLE PILL */}
-                            <div className="mt-12 relative z-[100] pointer-events-auto">
+                            <div className="mt-12 relative z-100 pointer-events-auto">
                                 <div className="relative flex p-1.5 bg-neutral-900/50 backdrop-blur-md rounded-full w-[280px] h-14 border border-white/5 items-center shadow-2xl">
                                     <motion.div
                                         className="absolute h-11 bg-white/10 rounded-full z-0"
@@ -355,7 +355,7 @@ export default function MerchPage() {
                         </div>
 
                         {/* Selection UI */}
-                        <div className="lg:col-span-4 flex flex-col justify-center relative z-[60]">
+                        <div className="lg:col-span-4 flex flex-col justify-center relative z-60">
                             <div className="space-y-4 mb-20 text-start">
                                 <h1 className="text-8xl md:text-9xl font-black font-inter-tight tracking-tighter uppercase flex flex-col items-start leading-[0.8]">
                                     <ShinyText text="WORLD" speed={3} />
@@ -437,7 +437,7 @@ export default function MerchPage() {
                     {/* INTERSECTION MARQUEES - CROSSING 'X' */}
                     <div className="relative w-screen left-1/2 -ml-[50vw] h-[200px] sm:h-[500px] flex items-center justify-center overflow-hidden">
                         {/* Diagonal 1 */}
-                        <div className="absolute w-[150%] rotate-[6deg] border-y border-white/10 py-3 sm:py-8 bg-neutral-950/90 backdrop-blur-2xl z-10 shadow-2xl">
+                        <div className="absolute w-[150%] rotate-6 border-y border-white/10 py-3 sm:py-8 bg-neutral-950/90 backdrop-blur-2xl z-10 shadow-2xl">
                             <div className="flex overflow-hidden whitespace-nowrap">
                                 <motion.div
                                     animate={{ x: [0, -1000] }}
@@ -456,7 +456,7 @@ export default function MerchPage() {
                         </div>
 
                         {/* Diagonal 2 */}
-                        <div className="absolute w-[150%] rotate-[-6deg] border-y border-white/20 py-3 sm:py-8 bg-its-red/90 backdrop-blur-2xl z-0 shadow-2xl">
+                        <div className="absolute w-[150%] -rotate-6 border-y border-white/20 py-3 sm:py-8 bg-its-red/90 backdrop-blur-2xl z-0 shadow-2xl">
                             <div className="flex overflow-hidden whitespace-nowrap">
                                 <motion.div
                                     animate={{ x: [-1000, 0] }}
@@ -537,11 +537,11 @@ export default function MerchPage() {
                                 <div className="space-y-6 mb-14">
                                     <p className="text-[10px] uppercase font-bold text-neutral-600 tracking-[0.4em] mb-4">SPECIFICATIONS</p>
                                     <div className="grid grid-cols-2 gap-4">
-                                        <div className="p-4 bg-white/[0.03] border border-white/5 rounded-xl">
+                                        <div className="p-4 bg-white/3 border border-white/5 rounded-xl">
                                             <p className="text-[8px] font-bold text-neutral-600 uppercase tracking-widest mb-1">Diameter</p>
                                             <p className="text-[10px] font-black text-neutral-200">1.25 INCH</p>
                                         </div>
-                                        <div className="p-4 bg-white/[0.03] border border-white/5 rounded-xl">
+                                        <div className="p-4 bg-white/3 border border-white/5 rounded-xl">
                                             <p className="text-[8px] font-bold text-neutral-600 uppercase tracking-widest mb-1">Finish</p>
                                             <p className="text-[10px] font-black text-neutral-200">METALLIC</p>
                                         </div>
@@ -582,7 +582,7 @@ export default function MerchPage() {
 
                         <div className="flex flex-col gap-32">
                             {/* Interaction Controls - SIMPLIFIED TOGGLE */}
-                            <div className="flex flex-col md:flex-row items-center justify-start gap-12 border-y border-white/5 py-12 relative z-[50] pointer-events-auto">
+                            <div className="flex flex-col md:flex-row items-center justify-start gap-12 border-y border-white/5 py-12 relative z-50 pointer-events-auto">
                                 <div className="space-y-4 text-start">
                                     <p className="font-inter text-[10px] uppercase tracking-[0.5em] text-neutral-600 font-bold">VIEWPORT_CONTROL</p>
                                     <div className="flex items-center gap-8">
@@ -621,7 +621,7 @@ export default function MerchPage() {
                             {/* Interactive Area - NO BOX, DYNAMIC SCALE */}
                             <div className="relative w-full max-w-[100vw] -mx-[min(50vw-50%,0px)]">
                                 <motion.div
-                                    className="relative aspect-[16/9] w-full flex items-center justify-center overflow-visible z-10"
+                                    className="relative aspect-video w-full flex items-center justify-center overflow-visible z-10"
                                 >
                                     {/* Design Image */}
                                     <AnimatePresence mode="wait">
@@ -668,13 +668,13 @@ export default function MerchPage() {
             {/* MODALS */}
             <AnimatePresence>
                 {isOrderModalOpen && (
-                    <div className="fixed inset-0 z-[100] flex items-center justify-center p-4">
+                    <div className="fixed inset-0 z-100 flex items-center justify-center p-4">
                         <motion.div
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             exit={{ opacity: 0 }}
                             onClick={() => setIsOrderModalOpen(false)}
-                            className="absolute inset-0 bg-black/90 backdrop-blur-sm"
+                            className="absolute inset-0 bg-black/90 backdrop-blur-xs"
                         />
                         <motion.div
                             initial={{ opacity: 0, scale: 0.9, y: 20 }}
@@ -682,7 +682,7 @@ export default function MerchPage() {
                             exit={{ opacity: 0, scale: 0.9, y: 20 }}
                             className="relative w-full max-w-lg bg-neutral-950 border border-white/10 p-12 overflow-hidden"
                         >
-                            <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-its-red to-transparent" />
+                            <div className="absolute top-0 left-0 w-full h-1 bg-linear-to-r from-transparent via-its-red to-transparent" />
 
                             <div className="space-y-8 text-center">
                                 <div className="space-y-2">
@@ -712,13 +712,13 @@ export default function MerchPage() {
                 )}
 
                 {isSizeModalOpen && (
-                    <div className="fixed inset-0 z-[100] flex items-start sm:items-center justify-center p-4 overflow-y-auto">
+                    <div className="fixed inset-0 z-100 flex items-start sm:items-center justify-center p-4 overflow-y-auto">
                         <motion.div
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             exit={{ opacity: 0 }}
                             onClick={() => setIsSizeModalOpen(false)}
-                            className="fixed inset-0 bg-black/90 backdrop-blur-sm"
+                            className="fixed inset-0 bg-black/90 backdrop-blur-xs"
                         />
                         <motion.div
                             initial={{ opacity: 0, scale: 0.9, y: 20 }}
@@ -782,7 +782,7 @@ export default function MerchPage() {
                                                 { s: "4XL", w: "25", l: "33" },
                                                 { s: "5XL", w: "26", l: "34" },
                                             ].map((row) => (
-                                                <tr key={row.s} className="border-b border-white/[0.02] hover:bg-white/[0.02] transition-colors">
+                                                <tr key={row.s} className="border-b border-white/2 hover:bg-white/2 transition-colors">
                                                     <td className="py-4 text-white font-black text-lg">{row.s}</td>
                                                     <td className="py-4 text-xl font-black text-white">{row.w}&quot;</td>
                                                     <td className="py-4 text-xl font-black text-white">{row.l}&quot;</td>
@@ -798,7 +798,7 @@ export default function MerchPage() {
                                     </div>
                                     <button
                                         onClick={() => window.location.href = "mailto:its.hcdc@gmail.com"}
-                                        className="w-full sm:w-auto relative z-10 flex items-center justify-center font-questrial font-bold uppercase tracking-widest text-[10px] sm:text-xs border border-white/30 rounded-b-[3rem] rounded-t-none sm:rounded-r-full sm:rounded-l-none py-5 sm:py-4 pl-8 pr-8 sm:pl-10 sm:pr-10 -mt-[1px] sm:-ml-6 sm:mt-0 bg-black/20 backdrop-blur-sm sm:bg-neutral-900/50 hover:bg-white/5 hover:border-white/60 transition-all group h-auto"
+                                        className="w-full sm:w-auto relative z-10 flex items-center justify-center font-questrial font-bold uppercase tracking-widest text-[10px] sm:text-xs border border-white/30 rounded-b-[3rem] rounded-t-none sm:rounded-r-full sm:rounded-l-none py-5 sm:py-4 pl-8 pr-8 sm:pl-10 sm:pr-10 -mt-px sm:-ml-6 sm:mt-0 bg-black/20 backdrop-blur-xs sm:bg-neutral-900/50 hover:bg-white/5 hover:border-white/60 transition-all group h-auto"
                                     >
                                         <span className="group-hover:text-its-red transition-colors whitespace-nowrap">Contact us</span>
                                     </button>

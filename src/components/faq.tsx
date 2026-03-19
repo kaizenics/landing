@@ -33,13 +33,13 @@ const FAQItem = ({ question, answer, isOpen, onClick }: { question: string, answ
     <motion.div
       initial={false}
       className={`relative overflow-hidden rounded-2xl border transition-all duration-300 ${isOpen
-        ? "border-blue-500/50 dark:border-its-red/50 bg-blue-500/[0.03] dark:bg-its-red/[0.03]"
+        ? "border-blue-500/50 dark:border-its-red/50 bg-blue-500/3 dark:bg-its-red/3"
         : "border-neutral-200 dark:border-white/5 bg-white/50 dark:bg-neutral-900/40 hover:border-neutral-300 dark:hover:border-white/10"
         } backdrop-blur-md`}
     >
       <button
         onClick={onClick}
-        className="flex w-full items-center justify-between p-6 text-left focus:outline-none"
+        className="flex w-full items-center justify-between p-6 text-left focus:outline-hidden"
         aria-expanded={isOpen}
       >
         <span className={`text-lg md:text-xl font-bold font-inter-tight transition-colors ${isOpen ? "text-blue-600 dark:text-its-red" : "text-neutral-800 dark:text-white"}`}>
@@ -135,7 +135,7 @@ export function FAQ() {
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
               transition={{ delay: 0.8 }}
-              className="mt-8 p-8 rounded-3xl bg-white/[0.03] border border-white/5 backdrop-blur-xl text-white flex flex-col sm:flex-row items-center justify-between gap-6"
+              className="mt-8 p-8 rounded-3xl bg-white/3 border border-white/5 backdrop-blur-xl text-white flex flex-col sm:flex-row items-center justify-between gap-6"
             >
               <div>
                 <h4 className="text-xl font-bold mb-1 font-inter-tight italic uppercase">Still have questions?</h4>

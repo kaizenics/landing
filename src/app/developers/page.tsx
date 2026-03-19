@@ -54,7 +54,7 @@ export default function DevelopersPage() {
         <div className="absolute top-0 right-0 w-[1000px] h-[1000px] bg-its-red/10 blur-[200px] rounded-full -mr-96 -mt-96 animate-pulse" />
         <div className="absolute bottom-0 left-0 w-[1000px] h-[1000px] bg-white/5 blur-[200px] rounded-full -ml-96 -mb-96" />
         <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-[0.03] bg-repeat pointer-events-none" />
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/50 to-black pointer-events-none" />
+        <div className="absolute inset-0 bg-linear-to-b from-transparent via-black/50 to-black pointer-events-none" />
       </div>
 
       <section className="relative px-6 pt-32 pb-48 sm:pt-48 sm:pb-64">
@@ -130,7 +130,7 @@ export default function DevelopersPage() {
                 transition={{ duration: 1, delay: 0.2 + idx * 0.15, ease: [0.16, 1, 0.3, 1] }}
                 className="group relative flex flex-col"
               >
-                <div className="relative aspect-[4/5] overflow-hidden rounded-[3rem] border border-white/5 bg-neutral-900/50 backdrop-blur-sm group-hover:border-its-red/30 transition-all duration-700 shadow-2xl isolate">
+                <div className="relative aspect-4/5 overflow-hidden rounded-[3rem] border border-white/5 bg-neutral-900/50 backdrop-blur-xs group-hover:border-its-red/30 transition-all duration-700 shadow-2xl isolate">
                   {/* Default Image */}
                   <Image
                     src={dev.image}
@@ -148,8 +148,8 @@ export default function DevelopersPage() {
                   />
 
                   {/* Gradient Overlays */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-neutral-950 via-transparent to-transparent opacity-60 z-20" />
-                  <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/80 to-transparent z-20" />
+                  <div className="absolute inset-0 bg-linear-to-t from-neutral-950 via-transparent to-transparent opacity-60 z-20" />
+                  <div className="absolute inset-x-0 bottom-0 h-1/2 bg-linear-to-t from-black/80 to-transparent z-20" />
 
                   {/* Badge for Founder */}
                   {dev.tags.includes("Founder") && (
@@ -212,7 +212,7 @@ export default function DevelopersPage() {
             transition={{ duration: 1.5 }}
             className="mt-40 sm:mt-64 text-center space-y-8"
           >
-            <div className="w-px h-32 bg-gradient-to-b from-white/20 to-transparent mx-auto" />
+            <div className="w-px h-32 bg-linear-to-b from-white/20 to-transparent mx-auto" />
             <div className="space-y-2">
               <p className="text-[10px] font-black text-white/30 uppercase tracking-[1em]">HCDC_ITS_CREATIVES_©2026</p>
               <p className="text-[8px] font-bold text-neutral-600 uppercase tracking-widest italic">Designed with Passion. Built with Precision.</p>

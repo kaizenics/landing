@@ -44,10 +44,10 @@ export const ExpandableFab = ({ className }: { className?: string }) => {
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             exit={{ opacity: 0 }}
-                            className="fixed inset-0 z-[9999] bg-black flex items-center justify-center overflow-hidden"
+                            className="fixed inset-0 z-9999 bg-black flex items-center justify-center overflow-hidden"
                         >
                             {/* Grid Background */}
-                            <div className="absolute inset-0 bg-grid-white/[0.05] [mask-image:radial-gradient(ellipse_at_center,white,transparent)]" />
+                            <div className="absolute inset-0 bg-grid-white/[0.05] mask-[radial-gradient(ellipse_at_center,white,transparent)]" />
 
                             <div className="relative z-20 flex flex-col items-center">
                                 <motion.div
@@ -66,7 +66,7 @@ export const ExpandableFab = ({ className }: { className?: string }) => {
                                     transition={{ duration: 0.8, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
                                     className="overflow-hidden"
                                 >
-                                    <h1 className="font-inter-tight font-black text-[15vw] md:text-[20vw] leading-[0.8] text-transparent bg-clip-text bg-gradient-to-b from-white to-neutral-600 tracking-tighter uppercase text-center">
+                                    <h1 className="font-inter-tight font-black text-[15vw] md:text-[20vw] leading-[0.8] text-transparent bg-clip-text bg-linear-to-b from-white to-neutral-600 tracking-tighter uppercase text-center">
                                         STORY
                                     </h1>
                                 </motion.div>
@@ -83,7 +83,7 @@ export const ExpandableFab = ({ className }: { className?: string }) => {
                 onMouseLeave={() => setIsHovered(false)}
             >
                 <motion.button
-                    className={`relative z-20 flex items-center justify-between gap-4 pl-8 pr-2 py-5 sm:py-4 bg-gradient-to-r from-its-red to-its-red text-white font-questrial font-bold text-sm tracking-wide shadow-[0_0_30px_rgba(220,38,38,0.5)] border border-its-red/30 hover:brightness-110 transition-all overflow-hidden w-auto ${className || "rounded-full"}`}
+                    className={`relative z-20 flex items-center justify-between gap-4 pl-8 pr-2 py-5 sm:py-4 bg-linear-to-r from-its-red to-its-red text-white font-questrial font-bold text-sm tracking-wide shadow-[0_0_30px_rgba(220,38,38,0.5)] border border-its-red/30 hover:brightness-110 transition-all overflow-hidden w-auto ${className || "rounded-full"}`}
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                     onClick={() => handleNavigation("/story")}
@@ -117,7 +117,7 @@ export const ExpandableFab = ({ className }: { className?: string }) => {
                                     }}
                                     className="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-white/10 text-left group transition-colors min-w-[200px]"
                                 >
-                                    <div className="w-8 h-8 rounded-full bg-gradient-to-br from-its-red/20 to-transparent flex items-center justify-center text-its-red group-hover:text-red-300 group-hover:bg-its-red/30 transition-colors">
+                                    <div className="w-8 h-8 rounded-full bg-linear-to-br from-its-red/20 to-transparent flex items-center justify-center text-its-red group-hover:text-red-300 group-hover:bg-its-red/30 transition-colors">
                                         <item.icon className="w-4 h-4" />
                                     </div>
                                     <div>

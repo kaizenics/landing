@@ -20,7 +20,7 @@ export const Footer = () => {
           HCDC ITS
         </motion.h2>
         {/* Ambient Background Glow */}
-        <div className="absolute inset-0 bg-gradient-to-t from-white/5 to-transparent pointer-events-none" />
+        <div className="absolute inset-0 bg-linear-to-t from-white/5 to-transparent pointer-events-none" />
       </div>
     </footer>
   );
